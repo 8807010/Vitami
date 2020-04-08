@@ -2,5 +2,10 @@
 
 
 {% block body %}
-    Hello!
+
+    <h1 class="el-title">
+        Hello!
+        {% include "components/svg_inline.twig"  with { name: "ic-twitter" } %}
+    </h1>
+
 {% endblock %}

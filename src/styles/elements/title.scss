@@ -1,0 +1,5 @@
+.el-title {
+  @include fontSizeResponsive($fs-title);
+  margin: 1em 0 0.5em;
+
+}

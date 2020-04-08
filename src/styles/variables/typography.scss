@@ -1,0 +1,20 @@
+// Typography
+
+// Fonts:
+$font-base: 'Montserrat', sans-serif;
+
+
+// Font sizes:
+
+$fs-base: px-to-rem(16);
+
+$fs-text:(
+    xs: px-to-rem(16),
+    md: px-to-rem(18),
+);
+
+$fs-title:(
+    xs: px-to-rem(20),
+    md: px-to-rem(24),
+);
+

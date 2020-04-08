@@ -1,0 +1,37 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: $font-base;
+  font-style: normal;
+  font-weight: normal;
+  @include fontSizeResponsive($fs-base);
+  line-height: 1.4;
+  color: $c-text;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  &.stop-scrolling {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+}
+
+svg {
+  fill: currentColor;
+}
+
+button,
+a {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  font-size: inherit;
+}
