@@ -11,11 +11,11 @@
   "svgInlineSpriteDirectory" : "images/svg_sprite_inline",
   "criticalDirectory" : "critical",
 
-  "sourcePath" : "src/app",
-  "destinationPath" : "src/public",
-  "temporaryPath" : "src/.tmp",
+  "sourcePath" : "src",
+  "destinationPath" : "public",
+  "temporaryPath" : ".tmp",
 
-  "template_engine" : "html",
+  "template_engine" : "twig",
 
   "javascript_libraries" : [
     "./node_modules/jquery/dist/jquery.min.js"
@@ -25,7 +25,7 @@
   "minify_images" : true,
   "css_source_maps" : false,
   "js_source_maps" : true,
-  "concatenate_scripts" : true,
+  "concatenate_scripts" : false,
   "critical_css" : false,
   "inline_css" : true
 }

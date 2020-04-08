@@ -3,7 +3,6 @@ module.exports = () => {
     return blinker.gulp.src('./' + blinker.config.sourcePath + '/' + blinker.config.stylesDirectory + '/style.scss')
       .pipe(blinker.plugins.sass().on('error', blinker.plugins.sass.logError))
       .pipe(blinker.plugins.autoprefixer({
-        browsers: ['last 10 versions'],
         cascade: 1
       }))
       .pipe(blinker.plugins.rename('style.css'))
@@ -20,7 +19,6 @@ module.exports = () => {
 
     stream = stream.pipe(blinker.plugins.sass().on('error', blinker.plugins.sass.logError))
       .pipe(blinker.plugins.autoprefixer({
-        browsers: ['last 10 versions'],
         cascade: 1
       }))
       .pipe(blinker.plugins.rename('style.css'))
