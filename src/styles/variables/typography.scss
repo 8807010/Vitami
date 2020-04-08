@@ -13,8 +13,10 @@ $fs-text:(
     md: px-to-rem(18),
 );
 
-$fs-title:(
-    xs: px-to-rem(20),
-    md: px-to-rem(24),
+$fs-title-1: (
+        xs: px-to-rem(36),
+        md: px-to-rem(44),
+        xl: px-to-rem(48)
 );
 
+$fs-title-2: px-to-rem(24);
