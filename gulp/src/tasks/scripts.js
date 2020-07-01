@@ -1,18 +1,13 @@
 module.exports = () => {
-  blinker.gulp.task('scripts:libraries', () => {
-    return blinker.gulp.src(blinker.config.javascript_libraries)
-      .pipe(blinker.plugins.concat('libraries.js'))
-      .pipe(blinker.gulp.dest(blinker.config.temporaryPath + '/' + blinker.config.javascriptDirectory))
-  });
 
   blinker.gulp.task('scripts', () => {
     if (blinker.config.use_babel) {
-      return blinker.gulp.src(
-        [
-          './' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/**',
-          '!./' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/libraries.js'
-        ]
-      )
+      return blinker.gulp.src('./' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/*.js')
+        .pipe(blinker.plugins.rollup({ plugins: [
+            blinker.plugins.rollup_babel(),
+            blinker.plugins.resolve(),
+            blinker.plugins.commonjs()
+        ] }, 'umd'))
         .pipe(blinker.plugins.babel({
           ignore: [
             './' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/libs/**',
@@ -29,11 +24,12 @@ module.exports = () => {
         .pipe(blinker.plugins.browser_sync.reload({stream: true}));
     }
 
-    return blinker.gulp.src(
-      [
-        './' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/**',
-        '!./' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/libraries.js',
-      ])
+    return blinker.gulp.src('./' + blinker.config.sourcePath + '/' + blinker.config.javascriptDirectory + '/*.js')
+        .pipe(blinker.plugins.rollup({ plugins: [
+            blinker.plugins.rollup_babel(),
+            blinker.plugins.resolve(),
+            blinker.plugins.commonjs()
+        ] }, 'umd'))
       .pipe(blinker.gulp.dest(blinker.config.temporaryPath + '/' + blinker.config.javascriptDirectory + '/'))
       .pipe(blinker.plugins.browser_sync.reload({stream: true}));
   });
