@@ -6,7 +6,7 @@
   "license": "MIT",
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
   },
   "scripts": {
@@ -58,5 +58,12 @@
     "merge-stream": "^1.0.1",
     "node-sass": "^4.13.1",
     "svg4everybody": "^2.1.9"
+  },
+  "devDependencies": {
+    "gulp-better-rollup": "^4.0.1",
+    "rollup": "^2.18.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
