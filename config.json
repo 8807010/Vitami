@@ -7,6 +7,7 @@
   "pngSpriteDirectory" : "images/png_sprite",
   "imagesDirectory" : "images",
   "fontsDirectory" : "fonts",
+  "ajaxDirectory": "ajax-requests",
   "svgSpriteDirectory" : "images/svg_sprite",
   "svgInlineSpriteDirectory" : "images/svg_sprite_inline",
   "criticalDirectory" : "critical",
@@ -16,7 +17,7 @@
   "temporaryPath" : ".tmp",
 
   "template_engine" : "twig",
-
+  "javascript_libraries" : [],
   "use_babel" : true,
   "minify_images" : true,
   "css_source_maps" : false,

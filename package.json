@@ -11,7 +11,8 @@
   },
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "build-watch": "gulp build-watch"
   },
   "browserslist": [
     "> 1%",
