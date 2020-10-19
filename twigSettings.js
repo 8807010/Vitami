@@ -39,6 +39,13 @@ module.exports = {
             func: function (args) {
                 return "the filter";
             }
+        },
+        {
+            name: "json_decode",
+            func: function (args) {
+                /* using: {% set pool_zones = pool_zones_json | json_decode %} */
+                return JSON.parse(args);
+            }
         }
     ]
 };
