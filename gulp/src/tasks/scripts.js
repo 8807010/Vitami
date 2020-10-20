@@ -68,7 +68,11 @@ module.exports = () => {
       stream = stream.pipe(blinker.plugins.source_maps.init());
     }
 
-    if (blinker.config.concatenate_scripts) {
+    // if (blinker.config.concatenate_scripts) {
+    //   stream = stream.pipe(blinker.plugins.uglify());
+    // }
+
+    if (blinker.config.minify_scripts) {
       stream = stream.pipe(blinker.plugins.uglify());
     }
 
