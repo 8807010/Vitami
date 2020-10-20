@@ -7,7 +7,7 @@ const createStyles = function(url){
 
 
 module.exports = {
-    data: require('./data.json'),
+    data: require('./twig-data.json'),
     functions: [
         {
             name: "_e",

@@ -32,7 +32,7 @@ global.blinker = {
     resolve: require('rollup-plugin-node-resolve'),
     commonjs: require('rollup-plugin-commonjs'),
   },
-  twigSettings: require('./twigSettings.js')
+  twigSettings: require('./twig-settings.js')
 };
 
 blinker.core.forEach(taskPath => {
