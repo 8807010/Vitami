@@ -17,7 +17,7 @@
 
   "destinationPath" : "public",
   "ignoreWhenPublicClean" : [],
-  "allowCleanOutsideFrontend": "false",
+  "allowCleanOutsideFrontend": false,
 
   "template_engine" : "twig",
   "javascript_libraries" : [],
