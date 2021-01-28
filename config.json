@@ -13,8 +13,11 @@
   "criticalDirectory" : "critical",
 
   "sourcePath" : "src",
-  "destinationPath" : "public",
   "temporaryPath" : ".tmp",
+
+  "destinationPath" : "public",
+  "ignoreWhenPublicClean" : [],
+  "allowCleanOutsideFrontend": "false",
 
   "template_engine" : "twig",
   "javascript_libraries" : [],
