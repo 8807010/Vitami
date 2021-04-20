@@ -6,7 +6,7 @@ module.exports = () => {
         cssName: 'png-sprite.scss',
         cssFormat: 'scss',
         algorithm: 'binary-tree',
-        cssTemplate: './png-sprite-template.txt',
+        cssTemplate: './gulp/templates/png-sprite-template.txt',
         cssVarMap: function (sprite) {
           sprite.name = 'icon-' + sprite.name
         }
