@@ -1,32 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% set template_class = "t-base" %}
+{% set main_class = template_class ~ '__main' %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+{% extends "layout/_index.twig" %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-</head>
-<body>
-        {# check if npm or wp build:  #}
-        {% if not isGulpTwig %}
-            <p style="color: red"> WP detected </p>
-        {% else %}
-            <p style="color: red"> Gulp detected </p>
-        {% endif %}
+{% block template %}
 
-    <main class="t-base">
-        {% block body %}
+    {% include 'areas/header.twig' %}
 
-
+    <main class="{{ main_class }}">
+        {% block content %}
+            {{ content }}
         {% endblock %}
     </main>
 
-    {% block scripts %}
-        <script src="./js/scripts.js"></script>
-    {% endblock %}
-</body>
-</html>
+    {% include 'areas/footer.twig' %}
+
+
+{% endblock %}

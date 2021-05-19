@@ -1,0 +1,43 @@
+<!doctype html>
+<html {{ site.language_attributes }}>
+<head>
+    <meta charset="{{ site.charset }}">
+    <meta name="description" content="{{ site.description }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block styles %}
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    {% endblock %}
+
+</head>
+
+<body class="{{ body_class }} {{ template_class }}">
+
+{% block template %}
+
+    {% include 'areas/header.twig' %}
+
+    <main class="{{ main_class }}">
+
+    {{ content }}
+
+    </main>
+
+    {% include 'areas/footer.twig' %}
+
+{% endblock %}
+
+
+
+{% block scripts %}
+    <script src="./js/scripts.js"></script>
+{% endblock %}
+
+</body>
+</html>

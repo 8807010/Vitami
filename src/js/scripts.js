@@ -2,6 +2,7 @@
 import svg4everybody from 'svg4everybody';
 import scrollLock from 'scroll-lock';
 
+import Header from './components/header'
 import testServerRequest from './components/test-server-request.js'
 
 svg4everybody();
@@ -12,6 +13,8 @@ window.app = {
     disable: scrollLock.disablePageScroll,
     enable: scrollLock.enablePageScroll
   },
+  mobileBreakpoint: 767.99 / 16,
+  mobileQuery: window.matchMedia(`(max-width: ${767.99 / 16}rem)`),
   setInert(...args) {
     args.forEach(item => {
       item.setAttribute('inert', true);
@@ -35,6 +38,9 @@ window.app = {
   },
 
   init () {
+
+    window.app.header = new Header('.js-header');
+
     app.initModule(testServerRequest, '.js-test-api');
   }
 

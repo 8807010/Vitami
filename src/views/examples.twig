@@ -1,5 +1,7 @@
 {% extends "./layout/base.twig" %}
 
+{% block title %}Examples{% endblock %}
+
 {% block content %}
 
     {# check if npm or wp build:  #}
@@ -41,6 +43,7 @@
                 </select>
             </article>
 
+
         </div>
     </div>
 
@@ -51,8 +54,7 @@
 
                 <h2 class="el-title">Test an Request?</h2>
 
-                <button class="btn"
-                        type="button"
+                <button class="btn" type="button"
                         data-test-api="/ajax-requests/example-server-response.json">
                     Click Me!
                 </button>
