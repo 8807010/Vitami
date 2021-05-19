@@ -12,5 +12,7 @@ $s-inner-width-md: 700px;
 $s-content: $s-inner-width + 2 * map_get($s-content-padding, md);
 $s-content-md: $s-inner-width-md + 2 * map_get($s-content-padding, md);
 
-
-
+$s-header-height: (
+        xs: px-to-rem(56),
+        lg: px-to-rem(76),
+);
