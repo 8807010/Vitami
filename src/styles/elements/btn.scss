@@ -28,17 +28,17 @@
   padding: 0.875em 2em;
   overflow: hidden;
   background: $c-brand;
-  color: $c-white;
+  color: $c-main;
 
   &:hover {
     color: $c-brand;
-    background: $c-white;
+    background: $c-main;
   }
 
   &:focus,
   &:active {
     color: $c-brand;
-    background: $c-white;
+    background: $c-main;
   }
   &:disabled,
   &.disabled {

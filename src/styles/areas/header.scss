@@ -1,6 +1,6 @@
 .header {
 
-  background-color: $c-white;
+  background-color: $c-main;
   @include paddingResponsive($s-header-height, top);
   $header-shadow: 0 px-to-rem(2) px-to-rem(4) rgba($c-black, 0.15);
 
@@ -58,7 +58,7 @@
       }
 
       #{$mainMenu}.is-open & {
-        //color: $c-white;
+        //color: $c-main;
         &-open {
           opacity: 0;
         }
@@ -87,7 +87,7 @@
   }
 
   &-nav {
-    background: $c-white;
+    background: $c-main;
     position: fixed;
     left: 0;
     width: 100%;
@@ -127,29 +127,29 @@
       font-size: px-to-rem(24);
       color: inherit;
       transition: color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 0 0 $c-accent;
+      box-shadow: 0 0 0 0 $c-title;
       margin-left: px-to-rem(4);
       margin-right: px-to-rem(4);
 
       &:hover {
         color: inherit;
-        //color: $c-accent;
+        //color: $c-title;
         box-shadow: 0 px-to-rem(4) 0 0 $c-text;
       }
 
       &.is-active {
         color: inherit;
-        //color: $c-accent;
+        //color: $c-title;
         box-shadow: 0 px-to-rem(4) 0 0 $c-text;
       }
 
 
       &--extra-item {
-        color: $c-accent;
+        color: $c-title;
       }
 
       &--btn {
-        color: $c-white;
+        color: $c-main;
         background: $c-black;
         margin-left: 0;
         margin-right: 0;
@@ -157,7 +157,7 @@
         border-radius: px-to-rem(10);
         transition: background-color 0.3s ease, color 0.3s ease;
         &:hover {
-          color: $c-white;
+          color: $c-main;
           background: $c-black;
           box-shadow: none;
         }
@@ -189,7 +189,7 @@
         border-bottom: none;
       }
       &:hover {
-        color: $c-accent;
+        color: $c-title;
       }
     }
 
@@ -233,7 +233,7 @@
       $mainBlock: #{&};
       height: map_get($s-header-height, lg);
       &:not(:last-child) {
-        box-shadow:  0 0 0 rgba($c-white, 0);
+        box-shadow:  0 0 0 rgba($c-main, 0);
         //box-shadow: $header-shadow;
         &.is-scroll {
           box-shadow:  $header-shadow;
@@ -328,7 +328,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: $c-white;
+        background-color: $c-main;
         box-shadow:  0 0 px-to-rem(4) rgba($c-black, 0.15);
         padding: px-to-rem(15);
         border-radius: px-to-rem(8);

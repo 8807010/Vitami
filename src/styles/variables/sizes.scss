@@ -2,15 +2,17 @@
 
 $s-content-padding: (
   xs: 20px,
-  md: 40px
+  md: 40px,
 );
 
+$s-offset: px-to-rem(16);
 
-$s-inner-width: 1140px;
-$s-inner-width-md: 700px;
 
-$s-content: $s-inner-width + 2 * map_get($s-content-padding, md);
-$s-content-md: $s-inner-width-md + 2 * map_get($s-content-padding, md);
+$s-inner-width: px-to-rem(1340);
+
+
+$s-content: $s-inner-width + 2 * $s-offset;
+
 
 $s-header-height: (
         xs: px-to-rem(56),
