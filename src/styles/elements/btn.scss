@@ -11,14 +11,14 @@
 
 .btn {
   font-family: $font-base;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   border: 1px solid $c-brand;
   box-shadow: none;
-  border-radius: 0.25em;
-  min-width: 210px;
+  border-radius: 0.5em;
+  min-width: 220px;
   margin: 10px 0;
-  transition: color 0.2s linear,
-              background 0.2s linear;
+  transition: color 0.2s linear,              background 0.2s linear;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -29,7 +29,6 @@
   overflow: hidden;
   background: $c-brand;
   color: $c-main;
-
   &:hover {
     color: $c-brand;
     background: $c-main;
@@ -42,6 +41,6 @@
   }
   &:disabled,
   &.disabled {
-    color: rgba($c-black, 0.4);
+    color: rgba($c-reverse, 0.4);
   }
 }

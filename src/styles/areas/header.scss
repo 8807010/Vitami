@@ -2,7 +2,7 @@
 
   background-color: $c-main;
   @include paddingResponsive($s-header-height, top);
-  $header-shadow: 0 px-to-rem(2) px-to-rem(4) rgba($c-black, 0.15);
+  $header-shadow: 0 px-to-rem(2) px-to-rem(4) rgba($c-reverse, 0.15);
 
   &-main {
     position: fixed;
@@ -150,7 +150,7 @@
 
       &--btn {
         color: $c-main;
-        background: $c-black;
+        background: $c-reverse;
         margin-left: 0;
         margin-right: 0;
         padding: px-to-rem(5) px-to-rem(33);
@@ -158,7 +158,7 @@
         transition: background-color 0.3s ease, color 0.3s ease;
         &:hover {
           color: $c-main;
-          background: $c-black;
+          background: $c-reverse;
           box-shadow: none;
         }
       }
@@ -329,7 +329,7 @@
         top: 100%;
         left: 0;
         background-color: $c-main;
-        box-shadow:  0 0 px-to-rem(4) rgba($c-black, 0.15);
+        box-shadow:  0 0 px-to-rem(4) rgba($c-reverse, 0.15);
         padding: px-to-rem(15);
         border-radius: px-to-rem(8);
         min-width: px-to-rem(252);
