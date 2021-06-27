@@ -1,13 +1,16 @@
 .s-hello {
   padding: px-to-rem(60) 0;
+  
 
   &__container {
-    @extend .l-container;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
   &__line {
-    @extend .l-text;
-    padding-bottom: px-to-rem(40);
+    width: 320px;
+    height: 345px;
   }
 
 }
