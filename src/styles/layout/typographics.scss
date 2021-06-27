@@ -1,5 +1,5 @@
 .l-text {
-  @include fontSizeResponsive($fs-base);
+  @include fontSizeResponsive($font-base);
   line-height: 1.6;
   font-weight: 300;
 }
