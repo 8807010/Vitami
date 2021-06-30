@@ -1,0 +1,9 @@
+.el-title {
+    @include fontSizeResponsive($fs-heading);
+    line-height: 120%;
+    font-weight: 600;
+    color: $c-brand;
+    padding-bottom: px-to-rem(64);
+    text-align: center;
+    margin: 0;
+}
