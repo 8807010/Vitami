@@ -8,11 +8,11 @@
     {% else %}
         <p style="color: red"> GULP detected </p>
     {% endif %}
-
+    {% include "sections/news.twig" %}
     <div class="s-hello">
         <div class="s-hello__container">
 
-            <h1 class="el-title">
+            <h1 class="el-headline">
                 Hello!
             </h1>
 
@@ -49,7 +49,7 @@
 
             <article class="s-hello__line js-test-api" >
 
-                <h2 class="el-title">Test an Request?</h2>
+                <h2 class="el-headline">Test an Request?</h2>
 
                 <button class="btn"
                         type="button"

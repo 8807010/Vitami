@@ -1,0 +1,13 @@
+.s-news {
+    &__container {
+        @extend .l-container;
+    }
+    &__title {
+        margin: 0;
+        // text-align: center;
+    }
+    &__text {
+        margin: 0;
+    
+    }
+}
