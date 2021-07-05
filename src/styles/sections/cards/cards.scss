@@ -1,0 +1,13 @@
+.c-cards {
+    @extend .l-container;
+    text-align: center;
+    background-color: $c-bg-main;
+    &__components {
+        display: flex;
+    }
+    &__btn {
+        height: px-to-rem(50);
+        width: px-to-rem(220);
+        margin: px-to-rem(64);
+    }
+}

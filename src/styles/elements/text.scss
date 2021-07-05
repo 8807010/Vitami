@@ -1,5 +1,5 @@
 .el-text {
-    @include fontSizeResponsive($fs-text);
+    font-size: $fs-text;
     line-height: 160%;
     color: $c-text;
     padding-bottom: px-to-rem(32);

@@ -9,6 +9,18 @@
         <p style="color: red"> GULP detected </p>
     {% endif %}
     {% include "sections/news.twig" %}
+    <section class="c-cards">
+        <div class="c-cards__components">
+            {% include "components/cards/card-1.twig" %}
+            {% include "components/cards/card-2.twig" %}
+            {% include "components/cards/card-3.twig" %}
+            {% include "components/cards/card-4.twig" %}
+        </div>
+
+        <button class="c-cards__btn btn">View More</button>
+    </section>
+    
+    
     <div class="s-hello">
         <div class="s-hello__container">
 
@@ -39,7 +51,10 @@
                     <option>option 2</option>
                     <option>option 3</option>
                 </select>
+
+                
             </article>
+
 
         </div>
     </div>

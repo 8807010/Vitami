@@ -26,12 +26,17 @@
 
 // components
 
+@import "sections/cards/card.scss";
+@import "sections/cards/cards.scss";
+
+
 // header / footer / modals and other: ?
 @import "areas/header";
 
 // sections
 @import "sections/hello";
 @import "sections/news";
+
 
 // templates
 @import "templates/base";
