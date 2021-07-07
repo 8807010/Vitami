@@ -388,7 +388,7 @@ label {
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
     -webkit-tap-highlight-color: transparent; }
 
-.l-container, .c-cards, .header-main__container, .s-news__container {
+.l-container, .header-main__container, .s-news__container {
   max-width: 85.75rem;
   margin: 0 auto;
   padding-left: 1rem;
@@ -564,19 +564,6 @@ label {
     color: #323232;
     font-size: 1.625rem;
     font-weight: 600; }
-
-.c-cards {
-  text-align: center;
-  background-color: #E5E5E5; }
-  .c-cards__components {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-  .c-cards__btn {
-    height: 3.125rem;
-    width: 13.75rem;
-    margin: 4rem; }
 
 .header {
   background-color: #ffffff;
