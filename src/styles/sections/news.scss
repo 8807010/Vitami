@@ -2,12 +2,20 @@
     &__container {
         @extend .l-container;
     }
+
     &__title {
         margin: 0;
-        // text-align: center;
     }
+
     &__text {
         margin: 0;
-        padding-bottom: px-to-rem(48);  
+        padding-bottom: px-to-rem(48);
+    }
+
+    &__list {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        list-style: none;
     }
 }

@@ -11,11 +11,10 @@
 .btn {
   font-family: $font-base;
   font-weight: 600;
-  border: 1px solid $c-brand;
+  border: px-to-rem(1) solid $c-brand;
   box-shadow: none;
   border-radius: 0.5em;
-  min-width: 220px;
-  margin: 10px 0;
+  min-width: px-to-rem(220);
   transition: color 0.2s linear;
   display: inline-block;
   cursor: pointer;
@@ -27,6 +26,7 @@
   overflow: hidden;
   background: $c-brand;
   color: $c-main;
+
   &:hover {
     color: $c-brand;
     background: $c-main;
