@@ -1,69 +1,66 @@
 .c-card {
-    height: px-to-rem(506);
-    width: px-to-rem(320);
     background-color: $c-main;
-    margin: 0 0 0 px-to-rem(20);
-    filter: drop-shadow(4px 8px 25px rgba(65, 65, 65, 0.1));
+    filter: drop-shadow(px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1));
     border-radius: px-to-rem(10);
+    padding-top: px-to-rem(16);
+    padding-left: px-to-rem(16);
+    padding-right: px-to-rem(16);
+    padding-bottom: px-to-rem(32);
+    width: 100%;
+    height: 100%;
 
-    &:first-child {
-        margin: 0;
+    * + * {
+        margin-top: px-to-rem(24);
     }
 
-    &__subtitle {
-        padding-left: px-to-rem(36);
-        text-align: left;
-        padding-bottom: px-to-rem(22);
-    }
+    &__picture {
+        position: relative;
 
-    &__text {
-        max-width: px-to-rem(256);
-        text-align: left;
-        padding-left: px-to-rem(32);
-        padding-bottom:  px-to-rem(25);
-
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: 69.4%;
+        }
     }
 
     &__img {
-        height: px-to-rem(200);
-        width: px-to-rem(280);
-        padding: px-to-rem(16) px-to-rem(16) px-to-rem(24);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
         border-radius: px-to-rem(8);
     }
 
+    &__content {
+        padding-left: px-to-rem(16);
+        padding-right: px-to-rem(16);
+    }
+
+    &__title,
     &__link {
-        display: none;
+        padding-left: px-to-rem(4);
+    }
+
+    &__link {
+        display: inline-block;
         font-size: $fs-text;
-        line-height: 140%;
+        line-height: 1.4;
         font-weight: 700;
         text-decoration: none;
-        padding-left: px-to-rem(36);
+        text-transform: capitalize;
         color: $c-brand;
-        text-align: left;
     }
 
-    &__buy {
-        display: flex;
-        flex-direction: column;
+    &__btn {
+        width: 100%;
+        min-width: auto;
     }
-}
 
-.buy {
     &__price {
         color: $c-title;
         font-size: $fs-title;
         font-weight: 600;
-        line-height: 140%;
-        text-align: left;
-        padding-left: px-to-rem(32);
-        padding-bottom: px-to-rem(24);
-    }
-
-    &__btn {
-        height: px-to-rem(50);
-        max-width: px-to-rem(256);
-        text-align: center;
-        margin: 0 auto;
-        padding-bottom: px-to-rem(32);
     }
 }

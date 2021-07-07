@@ -1,4 +1,100 @@
+{% if not args %}
+ {% set args = {
+     title: "News",
+     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac.
+     Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in
+     ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus.
+     Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit.
+     Nulla sed magna mattis phasellus eget hac.",
+     list: [
+        {
+            img: {
+                src: "https://images.unsplash.com/photo-1622495506467-86a4840011c0?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+                alt: "apartment design"
+            },
+            title: "Title 1",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            price: "$49",
+            btn: "Buy"
+        },
+        {
+            img: {
+                src: "./../../../images/card_img/c-card-1.jpeg",
+                alt: "apartment design"
+            },
+            title: "Title 2",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            link: {
+                name: "read",
+                href: "#"
+            },
+        },
+        {
+            img: {
+                src: "./../../../images/card_img/c-card-1.jpeg",
+                alt: "apartment design"
+            },
+            title: "Title 3",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            link: {
+                name: "read",
+                href: "#"
+            },
+        },
+        {
+            img: {
+                src: "./../../../images/card_img/c-card-1.jpeg",
+                alt: "apartment design"
+            },
+            title: "Title 4",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            link: {
+                name: "read",
+                href: "#"
+            },
+        },
+        {
+            img: {
+                src: "./../../../images/card_img/c-card-1.jpeg",
+                alt: "apartment design"
+            },
+            title: "Title 5",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            link: {
+                name: "read",
+                href: "#"
+            },
+        },
+        {
+            img: {
+                src: "./../../../images/card_img/c-card-1.jpeg",
+                alt: "apartment design"
+            },
+            title: "Title 6",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            link: {
+                name: "read",
+                href: "#"
+            },
+        },
+     ]
+ } %}
+{% endif %}
+
 <section class="s-news s-news__container">
-    <h2 class="s-news__title el-title ">News</h2>
-    <p class="s-news__text el-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus eget hac.</p>
+    {% if args.title %}
+        <h2 class="s-news__title el-title ">{{ args.title }}</h2>
+    {% endif %}
+    
+    <p class="s-news__text el-text">{{ args.description }}</p>
+    {% if args.list|length %}
+        <ul class="s-news__list">
+            {% for item in args.list %}
+                <li class="s-news__item">
+                    {% set args = item %}
+                    {% include "components/card.twig" with args %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </section>
