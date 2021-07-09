@@ -526,7 +526,16 @@ label {
   padding-right: 1rem;
   padding-bottom: 2rem;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .c-card * + * {
     margin-top: 1.5rem; }
   .c-card__picture {
@@ -546,9 +555,24 @@ label {
     border-radius: 0.5rem; }
   .c-card__content {
     padding-left: 1rem;
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
   .c-card__title, .c-card__link {
     padding-left: 0.25rem; }
+  .c-card__link-btn {
+    margin-top: auto; }
   .c-card__link {
     display: inline-block;
     font-size: 1rem;
@@ -556,7 +580,8 @@ label {
     font-weight: 700;
     text-decoration: none;
     text-transform: capitalize;
-    color: #4F8066; }
+    color: #4F8066;
+    margin-top: 1.5625rem; }
   .c-card__btn {
     width: 100%;
     min-width: auto; }
@@ -917,9 +942,34 @@ label {
 
 .s-news__list {
   display: grid;
-  gap: 30px;
+  gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   list-style: none; }
+
+.s-news__btn-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.s-news__btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 13.75rem; }
 
 .t-base {
   -webkit-box-flex: 1;

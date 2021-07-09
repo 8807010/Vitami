@@ -1,12 +1,12 @@
 {% if not args %}
- {% set args = {
-     title: "News",
-     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac.
-     Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in
-     ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus.
-     Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit.
-     Nulla sed magna mattis phasellus eget hac.",
-     list: [
+{% set args = {
+        title: "News",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac.
+        Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in
+        ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus.
+        Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit.
+        Nulla sed magna mattis phasellus eget hac.",
+        list: [
         {
             img: {
                 src: "https://images.unsplash.com/photo-1622495506467-86a4840011c0?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
@@ -14,6 +14,7 @@
             },
             title: "Title 1",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. ",
+            
             price: "$49",
             btn: "Buy"
         },
@@ -77,24 +78,38 @@
                 href: "#"
             },
         },
-     ]
- } %}
+        ],
+        link: {
+            name: "View More",
+            href: "#"
+        },
+} %}
 {% endif %}
 
 <section class="s-news s-news__container">
     {% if args.title %}
         <h2 class="s-news__title el-title ">{{ args.title }}</h2>
     {% endif %}
-    
-    <p class="s-news__text el-text">{{ args.description }}</p>
-    {% if args.list|length %}
-        <ul class="s-news__list">
-            {% for item in args.list %}
-                <li class="s-news__item">
-                    {% set args = item %}
-                    {% include "components/card.twig" with args %}
-                </li>
-            {% endfor %}
-        </ul>
+
+    {% if args.description %}
+        <p class="s-news__text el-text">{{ args.description }}</p>
     {% endif %}
+
+    {% if args.list|length %}
+    <ul class="s-news__list">
+        {% for item in args.list %}
+        <li class="s-news__item">
+            {% set args = item %}
+            {% include "components/card.twig" with args %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="s-news__btn-wrap">
+        {% if args.link.href and args.link.name %}
+        <a class="s-news__btn btn" href="{{ args.link.href }}">{{ args.link.name }}</a>
+        {% endif %}
+    </div>
+
 </section>
