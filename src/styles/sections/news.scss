@@ -8,8 +8,9 @@
     }
 
     &__text {
-        margin: 0;
-        padding-bottom: px-to-rem(48);
+        margin-bottom: px-to-rem(48);
+        max-width: px-to-rem(596);
+        margin-top: px-to-rem(64);
     }
 
     &__list {
