@@ -14,11 +14,12 @@
         <p class="c-card__text el-text">{{ args.text }}</p>
         {% endif %}
 
-        <div class="c-card__link-btn">
-            {% if args.link.href and args.link.name %}
+        {% if args.link.href and args.link.name %}
+        <div class="c-card__more">
             <a class="c-card__link" href="{{ args.link.href }}">{{ args.link.name }}</a>
-            {% endif %}
         </div>
+        {% endif %}
+        
 
         {% if args.price %}
         <p class="c-card__price">{{ args.price }}</p>

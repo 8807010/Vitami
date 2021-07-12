@@ -92,7 +92,9 @@
     {% endif %}
 
     {% if args.description %}
+    <div class="s-news__description">
         <p class="s-news__text el-text">{{ args.description }}</p>
+    </div>
     {% endif %}
 
     {% if args.list|length %}
@@ -106,7 +108,7 @@
     </ul>
     {% endif %}
 
-    <div class="s-news__btn-wrap">
+    <div class="s-news__footer">
         {% if args.link.href and args.link.name %}
         <a class="s-news__btn btn" href="{{ args.link.href }}">{{ args.link.name }}</a>
         {% endif %}
