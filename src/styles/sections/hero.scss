@@ -1,6 +1,6 @@
 .s-hero {
-    margin-top: px-to-rem(96);
-    display: flex;
+    padding-top: px-to-rem(96);
+    padding-bottom: px-to-rem(153);
     &__container {
     @extend .l-container;
     display: flex;
@@ -8,21 +8,19 @@
     }
     &__content {
         max-width: px-to-rem(660);
-        margin-bottom: px-to-rem(153);
         width: 100%;
     }
+    &__title {
+        margin-bottom: px-to-rem(32);
+    }
     &__subtitle {
-        margin-top: px-to-rem(32);
         font-size: $fs-heading;
         color: $c-text;
         font-weight: 600;
         line-height: 1.2;
-    }
-    &__btn {
-        margin-top: px-to-rem(48);
+        margin-bottom: px-to-rem(48);
     }
     &__img {
         max-width: px-to-rem(660);
-        width: 100%;
     }
 }
