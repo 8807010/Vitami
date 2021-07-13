@@ -1,12 +1,15 @@
 .s-news {
     padding-top: px-to-rem(153);
     padding-bottom: px-to-rem(64);
+    border-bottom: px-to-rem(2) solid $c-border;
+    
     &__container {
         @extend .l-container;
     }
 
     &__title {
         margin: 0;
+        font-size: $fs-heading;
     }
 
     &__text {

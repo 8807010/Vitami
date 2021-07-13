@@ -43,11 +43,11 @@
         flex-grow: 1;
     }
 
-    &__title,
+    &__subtitle,
     &__link {
         padding-left: px-to-rem(4);
     }
-
+    
     &__more {
         margin-top: auto;
     }
@@ -70,7 +70,7 @@
 
     &__price {
         color: $c-title;
-        font-size: $fs-title;
+        font-size: $fs-headline;
         font-weight: 600;
     }
 }
