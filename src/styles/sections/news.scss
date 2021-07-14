@@ -36,7 +36,6 @@
         font-size: $fs-text;
         font-weight: 700;
         text-transform: capitalize;
-        width: 100%;
-        max-width: px-to-rem(220);
+        width: px-to-rem(220);
     }
 }
