@@ -1,9 +1,7 @@
 .el-title {
-  font-size: $fs-headline;
+  font-size: $fs-title;
   font-weight: 600;
-  line-height: 120%;
-  padding-bottom: .57em;
+  line-height: 1.2;
   color: $c-brand;
-  max-width: 660px;
   margin: 0;
 }
