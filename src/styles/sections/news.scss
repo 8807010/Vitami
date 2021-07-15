@@ -10,11 +10,12 @@
     &__title {
         margin: 0;
         font-size: $fs-heading;
+        padding-bottom: px-to-rem(64);
     }
 
     &__text {
         margin: 0;
-        padding-bottom: px-to-rem(48);
+        padding-bottom: px-to-rem(64);
         max-width: px-to-rem(596);
     }
 
