@@ -1,11 +1,11 @@
 {% if not args %}
 {% set args = {
         title: "News",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac.
+        description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac.
         Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in
         ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus.
         Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit.
-        Nulla sed magna mattis phasellus eget hac.",
+        Nulla sed magna mattis phasellus eget hac.</p>",
         list: [
         {
             img: {
@@ -86,30 +86,33 @@
 } %}
 {% endif %}
 
-<section class="s-news s-news__container">
-    {% if args.title %}
+<section class="s-news">
+    <div class="s-news__container">
+        {% if args.title %}
         <h2 class="s-news__title el-title ">{{ args.title }}</h2>
-    {% endif %}
-
-    {% if args.description %}
-        <p class="s-news__text el-text">{{ args.description }}</p>
-    {% endif %}
-
-    {% if args.list|length %}
-    <ul class="s-news__list">
-        {% for item in args.list %}
-        <li class="s-news__item">
-            {% set args = item %}
-            {% include "components/card.twig" with args %}
-        </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-
-    <div class="s-news__btn-wrap">
-        {% if args.link.href and args.link.name %}
-        <a class="s-news__btn btn" href="{{ args.link.href }}">{{ args.link.name }}</a>
         {% endif %}
+
+        {% if args.description %}
+        <div class="s-news__text el-text">{{ args.description }}</div>
+        {% endif %}
+
+        {% if args.list|length %}
+        <ul class="s-news__list">
+            {% for item in args.list %}
+            <li class="s-news__item">
+                {% set args = item %}
+                {% include "components/card.twig" with args %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="s-news__footer">
+            {% if args.link.href and args.link.name %}
+            <a class="s-news__btn btn" href="{{ args.link.href }}">{{ args.link.name }}</a>
+            {% endif %}
+        </div>
     </div>
+
 
 </section>
