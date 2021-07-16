@@ -100,8 +100,7 @@
         <ul class="s-news__list">
             {% for item in args.list %}
             <li class="s-news__item">
-                {% set args = item %}
-                {% include "components/card.twig" with args %}
+                {% include "components/card.twig" with item %}
             </li>
             {% endfor %}
         </ul>
