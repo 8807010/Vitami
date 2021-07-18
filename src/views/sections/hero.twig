@@ -1,7 +1,7 @@
 {% if not args %}
 {% set args = {
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     button: "Button",
     image: {
         src: "./../../images/hero_section/hero-img.png",
@@ -18,8 +18,8 @@
             <h1 class="s-hero__title el-title">{{ args.title }}</h1>
             {% endif %}
     
-            {% if args.subtitle %}
-            <h2 class="s-hero__subtitle el-subtitle">{{ args.subtitle }}</h2>
+            {% if args.description %}
+            <p class="s-hero__description el-subtitle">{{ args.description }}</p>
             {% endif %}
     
             {% if args.button %}

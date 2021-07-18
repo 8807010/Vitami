@@ -11,7 +11,9 @@
         {% endif %}
 
         {% if text %}
-        <p class="c-card__text el-text">{{ text }}</p>
+        <div class="c-card__description">
+            <p class="c-card__text el-text">{{ text }}</p>
+        </div>
         {% endif %}
 
         {% if link.href and link.name %}

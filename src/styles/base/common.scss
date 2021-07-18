@@ -14,7 +14,6 @@ body {
   min-height: 100%;
   flex-direction: column;
   overflow-x: hidden;
-  background: $c-bg-main;
 
   &.stop-scrolling {
     overflow: hidden;

@@ -1,26 +1,29 @@
 .s-hero {
-    padding-top: px-to-rem(96);
-    padding-bottom: px-to-rem(153);
+    padding-top: px-to-rem(228);
+    padding-bottom: px-to-rem(132);
     &__container {
     @extend .l-container;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     }
     &__content {
-        max-width: px-to-rem(660);
-        width: 100%;
+        width: 50%;
     }
     &__title {
         margin-bottom: px-to-rem(32);
+        letter-spacing: -0.005em;
     }
-    &__subtitle {
+    &__description {
         font-size: $fs-heading;
         color: $c-text;
         font-weight: 600;
         line-height: 1.2;
         margin-bottom: px-to-rem(48);
+        letter-spacing: -0.005em;
     }
-    &__img {
-        max-width: px-to-rem(660);
+    &__picture {
+        width: 50%;
+
     }
 }

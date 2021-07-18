@@ -42,10 +42,14 @@
         flex-direction: column;
         flex-grow: 1;
     }
-
+    
     &__subtitle,
     &__link {
         padding-left: px-to-rem(4);
+    }
+
+    &__text {
+        letter-spacing: -0.0025em;
     }
     
     &__more {
@@ -57,6 +61,7 @@
         font-size: $fs-text;
         line-height: 1.4;
         font-weight: 700;
+        letter-spacing: 0.02em;
         text-decoration: none;
         text-transform: capitalize;
         color: $c-brand;

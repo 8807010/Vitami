@@ -10,12 +10,14 @@
     &__title {
         margin: 0;
         font-size: $fs-heading;
+        letter-spacing: -0.005em;
+        margin-bottom: px-to-rem(64);
     }
 
     &__text {
-        margin: 0;
-        padding-bottom: px-to-rem(48);
+        margin-bottom: px-to-rem(64);
         max-width: px-to-rem(596);
+        letter-spacing: -0.0025em;
     }
 
     &__list {
