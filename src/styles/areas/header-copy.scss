@@ -1,0 +1,6 @@
+.header {
+  height: px-to-rem(100);
+  &__container {
+    @extend .l-container;
+  }
+}
