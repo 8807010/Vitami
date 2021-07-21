@@ -22,7 +22,7 @@
   }
   &__btn {
     margin-left: px-to-rem(20);
-    width: px-to-rem(150);
+    min-width: px-to-rem(150);
     font-size: $fs-text;
     font-weight: 700;
     letter-spacing: 0.02em; 
@@ -59,7 +59,7 @@
     position: relative;
   }
   &__item {
-    padding-right: 6px;
+    padding-right: px-to-rem(6);
   }
 
   &__link {
@@ -68,12 +68,16 @@
   letter-spacing: -0.0025em;
   line-height: 1.5;
   font-size: $fs-text;
+  &:hover {
+    color: $c-brand;
+    transition: 0.3s ease;
+  }
   // &--active {
   //   color: $c-brand;
   // }
   }
   &__item + &__item {
-    margin-left: 65px;
+    margin-left: px-to-rem(65);
   }
   &__item:last-child:after {
     content: "";
