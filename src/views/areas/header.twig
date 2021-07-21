@@ -21,10 +21,6 @@
             href: "#",
             name: "Pricing",
         },
-        {
-            href: "#",
-            name: "More",
-        },
         ],
 
         buttons: [
@@ -64,22 +60,16 @@
                             {% if item.href and item.name %}
                             <a class="header-nav__link header-nav__link--active" href="{{ item.href }}">{{ item.name }}</a>
                             {% endif %}
-
-                            <!-- <ul>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Our team</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul> -->
-                            
-                            <!-- <select class="header__more" id="more" name="more">
-                                <option value="More">More</option>
-                                <option value="Shop"><a href="#">Shop</a></option>
-                                <option value="Our team"><a href="#">Our team</a></option>
-                                <option value="Contact"><a href="#">Contact</a></option>
-                            </select>  -->
-
                         </li>
                         {% endfor %}
+
+                        <select class="header__more" id="more" name="more">
+                            <option selected value="More">More</option>
+                            <option value="Shop"><a href="#">Shop</a></option>
+                            <option value="Our team"><a href="#">Our team</a></option>
+                            <option value="Contact"><a href="#">Contact</a></option>
+                        </select>
+
                     </ul>
 
                     {% endif %}

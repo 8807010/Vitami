@@ -8,6 +8,7 @@
   height: px-to-rem(100);
   box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
   background-color: $c-main;
+  z-index: 9999;
   &__container {
     @extend .l-container;
   }
@@ -48,6 +49,12 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+
+  &__more {
+    margin-left: px-to-rem(64);
+    width: px-to-rem(63);
+    border: none;
   }
 }
 
