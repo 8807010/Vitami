@@ -1,32 +1,36 @@
-.header { 
+.header {
   display: flex;
   align-items: center;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: px-to-rem(100);
+  height: $s-header-height;
   box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
   background-color: $c-main;
-  z-index: 9999;
+  z-index: $z-header;
+
   &__container {
     @extend .l-container;
   }
+
   &__logo-img {
-    width: px-to-rem(50);
-    height: px-to-rem(57);
-    margin-right: px-to-rem(122);
+    max-width: px-to-rem(50);
+    max-height: px-to-rem(57);
   }
+
   &__wrap {
     display: flex;
-    align-items:center;
+    align-items: center;
   }
+
   &__btn {
     margin-left: px-to-rem(20);
     min-width: px-to-rem(150);
     font-size: $fs-text;
     font-weight: 700;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
+    border: none;
     // &--active {
     //   color: $c-brand;
     //   background-color: $c-main;
@@ -35,9 +39,6 @@
     // &__btn:not(:first-child) {
     //   margin-left: px-to-rem(20);
     // }
-    }
-  &__btn:hover {
-    border: none;
   }
 
   &__auth {
@@ -51,50 +52,45 @@
     width: 100%;
   }
 
-  &__more {
-    margin-left: px-to-rem(64);
-    width: px-to-rem(63);
-    border: none;
-  }
-}
+  &__nav {
+    margin-left: 8.47%;
 
+    &-list {
+      display: flex;
+      list-style-type: none;
+      position: relative;
+    }
 
-.header-nav {
-  &__list {
-    display: flex;
-    list-style-type: none;
-    position: relative;
-  }
-  &__item {
-    padding-right: px-to-rem(6);
-  }
+    &-link {
+      text-decoration: none;
+      color: $c-title;
+      letter-spacing: -0.0025em;
+      line-height: 1.5;
+      font-size: $fs-text;
 
-  &__link {
-  text-decoration: none;
-  color: $c-title;
-  letter-spacing: -0.0025em;
-  line-height: 1.5;
-  font-size: $fs-text;
-  &:hover {
-    color: $c-brand;
-    transition: 0.3s ease;
-  }
-  // &--active {
-  //   color: $c-brand;
-  // }
-  }
-  &__item + &__item {
-    margin-left: px-to-rem(65);
-  }
-  &__item:last-child:after {
-    content: "";
-    display: inline-block;
-    background-image: url(./../../images/header/more.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: px-to-rem(6);
-    width: px-to-rem(8);
-    height: px-to-rem(4);
-    align-items: center;
+      &:hover {
+        color: $c-brand;
+        transition: 0.3s ease;
+      }
+
+      &--active {
+        color: $c-brand;
+      }
+    }
+
+    &-item+&-item {
+      margin-left: px-to-rem(65);
+    }
+
+    &-more {
+      list-style-type: none;
+    }
+    &-more-link {
+      text-decoration: none;
+      color: $c-title;
+      letter-spacing: -0.0025em;
+      line-height: 1.5;
+      font-size: $fs-text;
+    }
   }
 }
