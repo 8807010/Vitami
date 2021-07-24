@@ -1,19 +1,24 @@
 .s-hero {
     padding-top: px-to-rem(228);
     padding-bottom: px-to-rem(132);
+
     &__container {
-    @extend .l-container;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        @extend .l-container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
     }
+
     &__content {
         width: 50%;
     }
+
     &__title {
         margin-bottom: px-to-rem(32);
         letter-spacing: -0.005em;
     }
+
     &__description {
         font-size: $fs-heading;
         color: $c-text;
@@ -22,8 +27,11 @@
         margin-bottom: px-to-rem(48);
         letter-spacing: -0.005em;
     }
+
     &__picture {
         width: 50%;
 
     }
+
+    @include media-breakpoint-up(md) {}
 }
