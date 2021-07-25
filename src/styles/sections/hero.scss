@@ -26,12 +26,9 @@
 
 
     @include media-breakpoint-up(md) {
-        &__content {
-            max-width: px-to-rem(660);
-        }
 
         &__wrap {
-            padding: 0 px-to-rem(50);
+            padding: 0 px-to-rem(38);
         }
 
         &__btn {
@@ -45,7 +42,7 @@
         }
 
         &__wrap {
-            padding: 0 px-to-rem(182);
+            padding: 0 px-to-rem(166);
         }
     }
 
