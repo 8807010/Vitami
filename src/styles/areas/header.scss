@@ -81,16 +81,25 @@
     &-item+&-item {
       margin-left: px-to-rem(65);
     }
+  }
 
-    &-more {
-      list-style-type: none;
+  &__more-list {
+    list-style-type: none;
+  }
+
+  &__more-link {
+    text-decoration: none;
+    color: $c-title;
+    letter-spacing: -0.0025em;
+    line-height: 1.5;
+    font-size: $fs-text;
+    &:hover {
+      color: $c-brand;
+      transition: 0.3s ease;
     }
-    &-more-link {
-      text-decoration: none;
-      color: $c-title;
-      letter-spacing: -0.0025em;
-      line-height: 1.5;
-      font-size: $fs-text;
+
+    &--active {
+      color: $c-brand;
     }
   }
 }
