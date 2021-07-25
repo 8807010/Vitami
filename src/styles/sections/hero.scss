@@ -27,11 +27,21 @@
 
     @include media-breakpoint-up(md) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> draft
         &__content {
             max-width: px-to-rem(660);
         }
 
+<<<<<<< HEAD
 =======
+>>>>>>> draft
+=======
+        &__wrap {
+            padding: 0 px-to-rem(50);
+        }
+
 >>>>>>> draft
         &__btn {
             margin-bottom: px-to-rem(64);
@@ -41,6 +51,10 @@
     @include media-breakpoint-up(lg) {
         &__btn {
             margin-bottom: px-to-rem(32);
+        }
+
+        &__wrap {
+            padding: 0 px-to-rem(182);
         }
     }
 
@@ -52,10 +66,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-
-        &__container {
-            display: flex;
+            padding: 0;
         }
 
         &__content {
