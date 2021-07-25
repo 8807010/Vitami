@@ -26,10 +26,13 @@
 
 
     @include media-breakpoint-up(md) {
+<<<<<<< HEAD
         &__content {
             max-width: px-to-rem(660);
         }
 
+=======
+>>>>>>> draft
         &__btn {
             margin-bottom: px-to-rem(64);
         }
@@ -49,6 +52,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        &__container {
+            display: flex;
         }
 
         &__content {

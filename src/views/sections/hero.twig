@@ -13,11 +13,19 @@
 
 <section class="s-hero"> 
     <div class="s-hero__container">
-        <div class="s-hero__wrap">
-            <div class="s-hero__content">
-                {% if args.title %}
-                <h1 class="s-hero__title el-title">{{ args.title }}</h1>
-                {% endif %}
+        <div class="s-hero__content">
+            {% if args.title %}
+            <h1 class="s-hero__title el-title">{{ args.title }}</h1>
+            {% endif %}
+    
+            {% if args.description %}
+            <p class="s-hero__description el-subtitle">{{ args.description }}</p>
+            {% endif %}
+    
+            {% if args.button %}
+            <button class="s-hero__btn btn"> {{ args.button }}</button>
+            {% endif %}
+        </div>
         
                 {% if args.description %}
                 <p class="s-hero__description el-subtitle">{{ args.description }}</p>
