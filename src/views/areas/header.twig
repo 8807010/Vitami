@@ -80,10 +80,10 @@
 										<button class="header__nav-btn">{{ item.name }}
 											<span class="header__nav-icon">{% include "elements/icon.twig" with { name: "ic-more" } %}</span>
 										</button>
-										<ul class="header__nav-more">
+										<ul class="header__more-list">
 											{% for subitem in item.sublist %}
-												<li class="header__nav-more-item">
-													<a class="header__nav-more-link {% if subitem.isActive %} header__nav-more-link--active {% endif %}" href="{{ subitem.href }}">{{ subitem.name }}</a>
+												<li class="header__more-item">
+													<a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}" href="{{ subitem.href }}">{{ subitem.name }}</a>
 												</li>
 											{% endfor %}
 										</ul>
