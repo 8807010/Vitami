@@ -929,15 +929,15 @@ label {
   .s-hero__btn {
     margin-bottom: 3rem; }
   @media screen and (min-width: 48rem) {
-    .s-hero__content {
-      max-width: 41.25rem; }
     .s-hero__wrap {
-      padding: 0 3.125rem; }
+      padding: 0 2.375rem; }
     .s-hero__btn {
       margin-bottom: 4rem; } }
   @media screen and (min-width: 64.0625rem) {
     .s-hero__btn {
-      margin-bottom: 5rem; } }
+      margin-bottom: 2rem; }
+    .s-hero__wrap {
+      padding: 0 10.375rem; } }
   @media screen and (min-width: 75rem) {
     .s-hero {
       padding-top: 14.25rem;
@@ -954,7 +954,8 @@ label {
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
-                justify-content: space-between; }
+                justify-content: space-between;
+        padding: 0; }
       .s-hero__content {
         width: 50%; }
       .s-hero__picture {
