@@ -337,7 +337,8 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background: #ffffff; }
   body.stop-scrolling {
     overflow: hidden;
     height: 100%;
@@ -711,8 +712,40 @@ label {
     line-height: 1.2;
     margin-bottom: 3rem;
     letter-spacing: -0.005em; }
-  .s-hero__picture {
-    width: 50%; }
+  .s-hero__btn {
+    margin-bottom: 3rem; }
+  @media screen and (min-width: 48rem) {
+    .s-hero__wrap {
+      padding: 0 2.375rem; }
+    .s-hero__btn {
+      margin-bottom: 4rem; } }
+  @media screen and (min-width: 64.0625rem) {
+    .s-hero__btn {
+      margin-bottom: 2rem; }
+    .s-hero__wrap {
+      padding: 0 10.375rem; } }
+  @media screen and (min-width: 75rem) {
+    .s-hero {
+      padding-top: 14.25rem;
+      padding-bottom: 8.25rem; }
+      .s-hero__wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 0; }
+      .s-hero__content {
+        width: 50%; }
+      .s-hero__picture {
+        width: 50%; } }
 
 .s-hello {
   padding: 3.75rem 0; }
