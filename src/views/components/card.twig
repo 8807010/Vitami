@@ -1,8 +1,8 @@
 <article class="c-card">
     {% if img.src %}
     <div class="c-card__picture">
-        <img class="c-card__img" src="{{ img.src }}" alt="{{ img.alt }}">
-    </div>
+        <img class="c-card__img" src="{{ img.src }}" alt="">
+    </div> 
     {% endif %}
     
     <div class="c-card__content">
@@ -11,9 +11,7 @@
         {% endif %}
 
         {% if text %}
-        <div class="c-card__description">
-            <p class="c-card__text el-text">{{ text }}</p>
-        </div>
+        <div class="c-card__text el-text">{{ text }}</div>
         {% endif %}
 
         {% if link.href and link.name %}
