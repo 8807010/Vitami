@@ -15,8 +15,10 @@
     }
 
     &__text {
-        padding-bottom: px-to-rem(76);
-        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: px-to-rem(76);
+        max-width: px-to-rem(596);
     }
 
     &__list {
@@ -43,9 +45,8 @@
         }
 
         &__text {
-            padding: 0 px-to-rem(70);
-            padding-bottom: px-to-rem(64);
-            width: px-to-rem(596);
+
+            margin-bottom: px-to-rem(64);
         }
 
         &__list {
@@ -61,10 +62,8 @@
             padding-bottom: px-to-rem(64);
         }
 
-        &__text {
-            padding: 0 px-to-rem(198);
-            padding-bottom: px-to-rem(64);
-        }
+       
+        
 
         &__list {
             grid-template-columns: repeat(3, 1fr);
@@ -85,8 +84,8 @@
         }
 
         &__text {
-            padding-left: 0;
-            padding-right: 0;
+            margin-left: 0;
+
         }
     }
 }
