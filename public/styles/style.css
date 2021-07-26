@@ -644,11 +644,6 @@ label {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-<<<<<<< HEAD
-            justify-content: space-between; }
-  .s-hero__content {
-    width: 50%; }
-=======
             justify-content: space-between;
     width: 100%; }
   .header__nav {
@@ -686,7 +681,6 @@ label {
 .s-hero {
   padding-top: 6rem;
   padding-bottom: 4rem; }
->>>>>>> 47abfb1ae0e25dec822192a91addae4e60e56d4f
   .s-hero__title {
     margin-bottom: 2rem;
     letter-spacing: -0.005em; }
