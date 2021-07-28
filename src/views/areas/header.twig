@@ -58,52 +58,61 @@
 
 <header class="header">
 	<div class="header__container">
-		<div class="header__wrap">
-			<div class="header__logo">
-				<a class="header__logo-link" href="/">
-					{% if args.logo.src %}
-						<img class="header__logo-img" src="{{ args.logo.src }}">
-					{% endif %}
-				</a>
-			</div>
+		<div class="header__content">
+            <div class="header__wrap">
+                <div class="header__logo">
+                    <a class="header__logo-link" href="/">
+                        {% if args.logo.src %}
+                            <img class="header__logo-img" src="{{ args.logo.src }}">
+                        {% endif %}
+                    </a>
+                </div>
+    
+                <div class="header__menu">
+                    <button class="header__menu-btn">Menu
+                        <span class="header__nav-icon">{% include "elements/icon.twig" with { name: "ic-more" } %}</span>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="header__inner">
+                <nav class="header__nav">
+                    {% if args.list|length %}
+                        <ul class="header__nav-list">
+    
+                            {% for item in args.list %}
+                                <li class="header__nav-item">
+                                    {% if item.href and item.name %}
+                                        <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}" href="{{ item.href }}">{{ item.name }}</a>
+                                    {% elseif item.name and item.sublist|length %}
+                                        <button class="header__nav-btn">{{ item.name }}
+                                            <span class="header__nav-icon">{% include "elements/icon.twig" with { name: "ic-more" } %}</span>
+                                        </button>
+                                        <ul class="header__more-list">
+                                            {% for subitem in item.sublist %}
+                                                <li class="header__more-item">
+                                                    <a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}" href="{{ subitem.href }}">{{ subitem.name }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
 
-			<div class="header__menu">
-				<nav class="header__nav">
-					{% if args.list|length %}
-						<ul class="header__nav-list">
+        <div class="header__auth">
+            {% for button in args.button %}
+                <div class="header__link">
+                    {% if button.href and button.name|length %}
+                        <a class="header__btn btn header__btn--active" href="{{ button.href }}">{{ button.name }}</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
 
-							{% for item in args.list %}
-								<li class="header__nav-item">
-									{% if item.href and item.name %}
-										<a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}" href="{{ item.href }}">{{ item.name }}</a>
-									{% elseif item.name and item.sublist|length %}
-										<button class="header__nav-btn">{{ item.name }}
-											<span class="header__nav-icon">{% include "elements/icon.twig" with { name: "ic-more" } %}</span>
-										</button>
-										<ul class="header__more-list">
-											{% for subitem in item.sublist %}
-												<li class="header__more-item">
-													<a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}" href="{{ subitem.href }}">{{ subitem.name }}</a>
-												</li>
-											{% endfor %}
-										</ul>
-									{% endif %}
-								</li>
-							{% endfor %}
-						</ul>
-					{% endif %}
-				</nav>
-
-				<div class="header__auth">
-					{% for button in args.button %}
-						<div class="header__link">
-							{% if button.href and button.name|length %}
-								<a class="header__btn btn header__btn--active" href="{{ button.href }}">{{ button.name }}</a>
-							{% endif %}
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
 	</div>
 </header>

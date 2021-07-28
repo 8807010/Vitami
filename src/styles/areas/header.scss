@@ -19,49 +19,189 @@
     max-height: px-to-rem(57);
   }
 
-  &__wrap {
-    display: flex;
-    align-items: center;
+  &__menu-btn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fs-text;
+    line-height: 1.5;
+    letter-spacing: -0.0025em;
+    color: $c-title;
   }
 
-  &__btn {
-    margin-left: px-to-rem(20);
-    min-width: px-to-rem(150);
-    font-size: $fs-text;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    border: none;
-    // &--active {
-    //   color: $c-brand;
-    //   background-color: $c-main;
-    //   border: none;
-    // }
-    // &__btn:not(:first-child) {
-    //   margin-left: px-to-rem(20);
-    // }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__auth {
-    display: flex;
-  }
-
-  &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    display: none;
   }
 
   &__nav {
-    margin-left: 8.47%;
-
+    margin-left: px-to-rem(16);
+    &-arrow {
+      width: 4px; 
+      height: 8px;
+    }
+  
     &-list {
-      display: flex;
       list-style-type: none;
-      position: relative;
+    }
+
+    &-item {
+      margin-bottom: px-to-rem(32);
     }
 
     &-link {
+      text-decoration: none;
+    }
+
+    &-btn {
+      display: none;
+    }
+  }
+
+  &__more-list {
+    list-style-type: none;
+  }
+
+  &__more-item {
+    margin-bottom: px-to-rem(32);
+  }
+
+  &__more-link {
+    text-decoration: none;
+  }
+
+  &__inner {
+    height: 100vh;
+    position: absolute;
+    top: $s-header-height;
+    left: 0;
+    background-color: #fff;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: rgba(243, 248, 242, 0.9);
+  }
+
+
+  @include media-breakpoint-up(md) {
+    &__auth {
+      display: flex;
+    }
+
+    &__wrap {
+      display: flex;
+    }
+
+    &__inner {
+      padding-top: px-to-rem(96);
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__menu {
+      margin-left: px-to-rem(67);
+    }
+
+    &__nav {
+      margin-left: px-to-rem(114);
+    }
+
+    &__btn {
+      margin-left: px-to-rem(20);
+      min-width: px-to-rem(150);
+      font-size: $fs-text;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border: none;
+      // &--active {
+      //   color: $c-brand;
+      //   background-color: $c-main;
+      //   border: none;
+      // }
+      // &__btn:not(:first-child) {
+      //   margin-left: px-to-rem(20);
+      // }
+    }
+  }
+
+    
+
+
+  @include media-breakpoint-up(lg) {
+    &__menu {
+      margin-left: px-to-rem(64);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__menu {
+      display: none;
+    }
+
+    &__inner {
+      display: flex;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__nav {
+      margin-left: 8.47%;
+
+      &-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        position: relative;
+      }
+
+      &-icon {
+        width: px-to-rem(6);
+        height: px-to-rem(10);
+      }
+
+      &-link {
+        text-decoration: none;
+        color: $c-title;
+        letter-spacing: -0.0025em;
+        line-height: 1.5;
+        font-size: $fs-text;
+
+        &:hover {
+          color: $c-brand;
+          transition: 0.3s ease;
+        }
+
+        &--active {
+          color: $c-brand;
+        }
+      }
+
+      &-item+&-item {
+        margin-left: px-to-rem(65);
+      }
+    }
+
+    &__more-list {
+      list-style-type: none;
+    }
+
+    &__more-link {
       text-decoration: none;
       color: $c-title;
       letter-spacing: -0.0025em;
@@ -76,30 +216,6 @@
       &--active {
         color: $c-brand;
       }
-    }
-
-    &-item+&-item {
-      margin-left: px-to-rem(65);
-    }
-  }
-
-  &__more-list {
-    list-style-type: none;
-  }
-
-  &__more-link {
-    text-decoration: none;
-    color: $c-title;
-    letter-spacing: -0.0025em;
-    line-height: 1.5;
-    font-size: $fs-text;
-    &:hover {
-      color: $c-brand;
-      transition: 0.3s ease;
-    }
-
-    &--active {
-      color: $c-brand;
     }
   }
 }
