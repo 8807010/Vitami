@@ -675,6 +675,8 @@ label {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
+    .header__inner {
+      padding-top: 6rem; }
     .header__container {
       display: -webkit-box;
       display: -webkit-flex;
@@ -690,6 +692,8 @@ label {
               align-items: center; }
     .header__menu {
       margin-left: 4.1875rem; }
+    .header__nav {
+      margin-left: 7.125rem; }
     .header__btn {
       margin-left: 1.25rem;
       min-width: 9.375rem;

@@ -99,6 +99,10 @@
       display: flex;
     }
 
+    &__inner {
+      padding-top: px-to-rem(96);
+    }
+
     &__container {
       display: flex;
       justify-content: space-between;
@@ -107,6 +111,10 @@
 
     &__menu {
       margin-left: px-to-rem(67);
+    }
+
+    &__nav {
+      margin-left: px-to-rem(114);
     }
 
     &__btn {
@@ -126,6 +134,8 @@
       // }
     }
   }
+
+    
 
 
   @include media-breakpoint-up(lg) {
