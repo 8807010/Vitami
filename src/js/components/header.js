@@ -4,7 +4,6 @@ export default function header(header) {
   };
   const selectors = {
     submenu: "js-submenu",
-    submenuList: "js-submenu-list",
     submenuBtn: "js-submenu-btn",
   };
 
