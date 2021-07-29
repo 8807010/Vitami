@@ -19,20 +19,13 @@
     max-height: px-to-rem(57);
   }
 
-  &__menu-btn {
+  &__toggler {
     font-style: normal;
     font-weight: 400;
     font-size: $fs-text;
     line-height: 1.5;
     letter-spacing: -0.0025em;
     color: $c-title;
-  }
-
-
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__auth {
@@ -93,7 +86,7 @@
     text-decoration: none;
   }
 
-  &__inner {
+  &__nav {
     height: 100vh;
     position: absolute;
     top: $s-header-height;
@@ -113,21 +106,17 @@
       display: flex;
     }
 
-    &__wrap {
-      display: flex;
-    }
-
-    &__inner {
+    &__nav {
       padding-top: px-to-rem(96);
     }
 
     &__container {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       align-items: center;
     }
 
-    &__menu {
+    &__toggler {
       margin-left: px-to-rem(67);
     }
 
@@ -155,24 +144,14 @@
 
 
   @include media-breakpoint-up(lg) {
-    &__menu {
+    &__toggler {
       margin-left: px-to-rem(64);
     }
   }
 
   @include media-breakpoint-up(xl) {
-    &__menu {
+    &__toggler {
       display: none;
-    }
-
-    &__inner {
-      all: revert;
-    }
-
-    &__content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
     &__nav {
