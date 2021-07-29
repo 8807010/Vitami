@@ -135,8 +135,6 @@
     }
   }
 
-    
-
 
   @include media-breakpoint-up(lg) {
     &__menu {
@@ -150,7 +148,7 @@
     }
 
     &__inner {
-      display: flex;
+      all: revert;
     }
 
     &__content {
@@ -170,9 +168,17 @@
         position: relative;
       }
 
+      &-item {
+        margin-bottom: 0;
+      }
+
       &-icon {
         width: px-to-rem(6);
         height: px-to-rem(10);
+      }
+
+      &-btn {
+        display: block;
       }
 
       &-link {
@@ -199,6 +205,10 @@
 
     &__more-list {
       list-style-type: none;
+    }
+
+    &__more-item {
+      margin-bottom: 0;
     }
 
     &__more-link {
