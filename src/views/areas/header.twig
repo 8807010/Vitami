@@ -24,19 +24,37 @@
         {
             name: "More",
             sublist: [
-            {
-                href: "#",
-                name: "Shop",
-                isActive: true,
-            },
-            {
-                href: "#",
-                name: "Our team",
-            },
-            {
-                href: "#",
-                name: "Contacts",
-            },
+                {
+                    href: "#",
+                    name: "Shop",
+                    isActive: true,
+                },
+                {
+                    href: "#",
+                    name: "Our team",
+                },
+                {
+                    href: "#",
+                    name: "Contacts",
+                },
+            ]
+        },
+        {
+            name: "Last",
+            sublist: [
+                {
+                    href: "#",
+                    name: "Shop",
+                    isActive: true,
+                },
+                {
+                    href: "#",
+                    name: "Our team",
+                },
+                {
+                    href: "#",
+                    name: "Contacts",
+                },
             ]
         }
         ],
@@ -56,7 +74,7 @@
 {% endif %}
 
 
-<header class="header">
+<header class="header js-header">
 	<div class="header__container">
 		<div class="header__content">
             <div class="header__wrap">
@@ -81,14 +99,14 @@
                         <ul class="header__nav-list">
     
                             {% for item in args.list %}
-                                <li class="header__nav-item">
+                                <li class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
                                     {% if item.href and item.name %}
                                         <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}" href="{{ item.href }}">{{ item.name }}</a>
                                     {% elseif item.name and item.sublist|length %}
-                                        <button class="header__nav-btn">{{ item.name }}
-                                            <span class="header__nav-icon">{% include "elements/icon.twig" with { name: "ic-more" } %}</span>
+                                        <button class="header__submenu-btn js-submenu-btn">{{ item.name }}
+                                            <span class="header__sumbenu-icon">{% include "elements/icon.twig" with { name: "ic-more" } %}</span>
                                         </button>
-                                        <ul class="header__more-list">
+                                        <ul class="header__submenu-list js-submenu-list">
                                             {% for subitem in item.sublist %}
                                                 <li class="header__more-item">
                                                     <a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}" href="{{ subitem.href }}">{{ subitem.name }}</a>

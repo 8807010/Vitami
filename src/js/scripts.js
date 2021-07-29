@@ -2,7 +2,7 @@
 import svg4everybody from 'svg4everybody';
 import scrollLock from 'scroll-lock';
 
-import Header from './components/header'
+import header from './components/header.js';
 import testServerRequest from './components/test-server-request.js'
 
 svg4everybody();
@@ -39,7 +39,7 @@ window.app = {
 
   init () {
 
-    window.app.header = new Header('.js-header');
+    app.initModule(header, '.js-header');
 
     app.initModule(testServerRequest, '.js-test-api');
   }

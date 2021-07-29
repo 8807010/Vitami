@@ -63,8 +63,26 @@
     }
   }
 
-  &__more-list {
-    list-style-type: none;
+  &__submenu {
+    position: relative;
+    &-list {
+      display: none;
+      position: absolute;
+    }
+
+    &.is-open &-list {
+      display: block;
+    }
+  }
+
+  &__more {
+    &-list {
+      display: none;
+      list-style-type: none;
+      &.is-open {
+        display: block;
+      }
+    }
   }
 
   &__more-item {
@@ -178,7 +196,8 @@
       }
 
       &-btn {
-        display: block;
+        display: flex;
+        cursor: pointer;
       }
 
       &-link {
