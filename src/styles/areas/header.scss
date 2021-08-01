@@ -166,6 +166,24 @@
       align-items: center;
     }
 
+    &__submenu-btn {
+      position: relative;
+    }
+
+    &__submenu-list {
+      position: absolute;
+    background-color: $c-main;
+    padding-top: px-to-rem(32);
+    padding-left: px-to-rem(32);
+    padding-bottom: px-to-rem(32);
+    margin-top: px-to-rem(43);
+    width: px-to-rem(200);
+    border: solid px-to-rem(2) $c-bg-main;
+    border-radius: px-to-rem(10);
+    box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
+    list-style-type: none;
+    }
+
     &__nav {
       padding: 0;
 
@@ -218,6 +236,7 @@
 
     &__more-item {
       margin-bottom: 0;
+      padding-bottom: px-to-rem(8);
     }
 
     &__more-link {
