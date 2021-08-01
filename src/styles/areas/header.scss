@@ -14,12 +14,17 @@
     @extend .l-container;
   }
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__logo-img {
     max-width: px-to-rem(50);
     max-height: px-to-rem(57);
   }
 
-  &__menu-btn {
+  &__toggler {
     font-style: normal;
     font-weight: 400;
     font-size: $fs-text;
@@ -28,22 +33,15 @@
     color: $c-title;
   }
 
-
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__auth {
     display: none;
   }
 
   &__nav {
-    margin-left: px-to-rem(16);
+
     &-arrow {
-      width: 4px; 
-      height: 8px;
+      width: 10px; 
+      height: 6px;
     }
   
     &-list {
@@ -61,10 +59,34 @@
     &-btn {
       display: none;
     }
+
+    &-icon {
+      width: px-to-rem(11);
+      margin-left: px-to-rem(6);
+      height: px-to-rem(11);
+    }
   }
 
-  &__more-list {
-    list-style-type: none;
+  &__submenu {
+    position: relative;
+    &-list {
+      display: none;
+      position: absolute;
+    }
+
+    &.is-open &-list {
+      display: block;
+    }
+  }
+
+  &__more {
+    &-list {
+      display: none;
+      list-style-type: none;
+      &.is-open {
+        display: block;
+      }
+    }
   }
 
   &__more-item {
@@ -75,18 +97,19 @@
     text-decoration: none;
   }
 
-  &__inner {
-    height: 100vh;
-    position: absolute;
-    top: $s-header-height;
-    left: 0;
-    background-color: #fff;
-    padding-top: 1.5rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    width: 100%;
-    backdrop-filter: blur(15px);
-    background: rgba(243, 248, 242, 0.9);
+
+
+  @include media-breakpoint-down(lg) {
+    &__nav {
+      height: 100vh;
+      position: absolute;
+      top: $s-header-height;
+      left: 0;
+      padding-top: px-to-rem(32);
+      padding-left: px-to-rem(32);
+      width: 100%;
+      background: rgba(243, 248, 242, 0.9);
+    }
   }
 
 
@@ -95,12 +118,11 @@
       display: flex;
     }
 
-    &__wrap {
-      display: flex;
-    }
-
-    &__inner {
+    &__nav {
       padding-top: px-to-rem(96);
+      &-list {
+        margin-left: px-to-rem(98);
+      }
     }
 
     &__container {
@@ -109,12 +131,8 @@
       align-items: center;
     }
 
-    &__menu {
+    &__toggler {
       margin-left: px-to-rem(67);
-    }
-
-    &__nav {
-      margin-left: px-to-rem(114);
     }
 
     &__btn {
@@ -135,30 +153,39 @@
     }
   }
 
-
-  @include media-breakpoint-up(lg) {
-    &__menu {
-      margin-left: px-to-rem(64);
-    }
-  }
+  
 
   @include media-breakpoint-up(xl) {
-    &__menu {
+    &__toggler {
       display: none;
     }
 
-    &__inner {
-      all: revert;
-    }
-
-    &__content {
+    &__wrap {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
+    &__submenu-btn {
+      position: relative;
+    }
+
+    &__submenu-list {
+      position: absolute;
+    background-color: $c-main;
+    padding-top: px-to-rem(32);
+    padding-left: px-to-rem(32);
+    padding-bottom: px-to-rem(32);
+    margin-top: px-to-rem(43);
+    width: px-to-rem(200);
+    border: solid px-to-rem(2) $c-bg-main;
+    border-radius: px-to-rem(10);
+    box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
+    list-style-type: none;
+    }
+
     &__nav {
-      margin-left: 8.47%;
+      padding: 0;
 
       &-list {
         display: flex;
@@ -172,9 +199,13 @@
         margin-bottom: 0;
       }
 
-      &-icon {
-        width: px-to-rem(6);
-        height: px-to-rem(10);
+      &-btn {
+        display: flex;
+        cursor: pointer;
+      }
+
+      &-list {
+        margin-left: px-to-rem(122);
       }
 
       &-btn {
@@ -209,6 +240,7 @@
 
     &__more-item {
       margin-bottom: 0;
+      padding-bottom: px-to-rem(8);
     }
 
     &__more-link {
