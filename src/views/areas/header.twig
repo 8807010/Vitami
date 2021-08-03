@@ -86,13 +86,13 @@
                     </a>
                 </div>
         
-                <button class="header__menu-btn header__toggler">
+                <button class="header__menu-btn js-header__menu">
                     Menu
                     {% include "elements/icon.twig" with { name: "ic-more", modifier: "header__nav-icon" } %}
                 </button>
             </div>
     
-            <nav class="header__nav">
+            <nav class="header__nav js-header-modal">
                 {% if args.list|length %}
                 <ul class="header__nav-list">
     

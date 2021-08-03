@@ -38,6 +38,12 @@
   }
 
   &__nav {
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+
 
     &-arrow {
       width: 10px; 
@@ -73,6 +79,8 @@
       display: none;
       position: absolute;
     }
+
+    
 
     &.is-open &-list {
       display: block;
@@ -116,6 +124,10 @@
   @include media-breakpoint-up(md) {
     &__auth {
       display: flex;
+    }
+
+    &__menu-btn {
+      margin-left: px-to-rem(67);
     }
 
     &__nav {
@@ -184,7 +196,12 @@
     list-style-type: none;
     }
 
+    &__menu-btn {
+      display: none;
+    }
+
     &__nav {
+      display: block;
       padding: 0;
 
       &-list {
