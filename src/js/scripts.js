@@ -2,6 +2,7 @@
 import svg4everybody from 'svg4everybody';
 import scrollLock from 'scroll-lock';
 
+import modal from './components/modal.js';
 import header from './components/header.js';
 import menuMobile from './components/menu.js';
 import testServerRequest from './components/test-server-request.js'
@@ -42,9 +43,12 @@ window.app = {
 
     app.initModule(header, '.js-header');
 
+    app.initModule(modal, '.js-modal-active');
+
     app.initModule(menuMobile, '.js-header__menu');
 
     app.initModule(testServerRequest, '.js-test-api');
+
   }
 
 };
