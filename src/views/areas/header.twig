@@ -1,29 +1,29 @@
 {% if not args %}
-{% set args = {
+    {% set args = {
         logo: {
             src: "./../../images/header/logo.svg",
-            },
+        },
         list: [
-        {
-            href: "#",
-            name: "Home",
-            isActive: true,
-        },
-        {
-            href: "#",
-            name: "About us",
-        },
-        {
-            href: "#",
-            name: "Our service",
-        },
-        {
-            href: "#",
-            name: "Pricing",
-        },
-        {
-            name: "More",
-            sublist: [
+            {
+                href: "#",
+                name: "Home",
+                isActive: true,
+            },
+            {
+                href: "#",
+                name: "About us",
+            },
+            {
+                href: "#",
+                name: "Our service",
+            },
+            {
+                href: "#",
+                name: "Pricing",
+            },
+            {
+                name: "More",
+                sublist: [
                 {
                     href: "#",
                     name: "Shop",
@@ -38,10 +38,10 @@
                     name: "Contacts",
                 },
             ]
-        },
-        {
-            name: "Last",
-            sublist: [
+            },
+            {
+                name: "Last",
+                sublist: [
                 {
                     href: "#",
                     name: "Shop",
@@ -56,21 +56,21 @@
                     name: "Contacts",
                 },
             ]
-        }
+            }
         ],
 
 
         button: [
-        {
-            name: "Login",
-            href: "#"
-        },
-        {
-            name: "Sign Up",
-            href: "#"
-        },
+            {
+                name: "Login",
+                href: "#"
+            },
+            {
+                name: "Sign Up",
+                href: "#"
+            },
         ],
-} %}
+    } %}
 {% endif %}
 
 
@@ -81,58 +81,57 @@
                 <div class="header__logo">
                     <a class="header__logo-link" href="/">
                         {% if args.logo.src %}
-                        <img class="header__logo-img" src="{{ args.logo.src }}">
+                            <img class="header__logo-img" src="{{ args.logo.src }}">
                         {% endif %}
                     </a>
                 </div>
-        
+
                 <button class="header__menu-btn js-header__menu">
                     Menu
                     {% include "elements/icon.twig" with { name: "ic-more", modifier: "header__nav-icon" } %}
                 </button>
             </div>
-    
+
             <nav class="header__nav js-header-modal">
                 {% if args.list|length %}
-                <ul class="header__nav-list">
-    
-                    {% for item in args.list %}
-                    <li
-                        class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
-                        {% if item.href and item.name %}
-                        <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}"
-                            href="{{ item.href }}">{{ item.name }}</a>
-                        {% elseif item.name and item.sublist|length %}
-                        <button class="header__submenu-btn js-submenu-btn">{{ item.name }}
-                            <span class="header__sumbenu-icon">{% include "elements/icon.twig" with { name: "ic-more", modifier: "header__nav-icon" } %}</span>
-                        </button>
-                        <ul class="header__submenu-list">
-                            {% for subitem in item.sublist %}
-                            <li class="header__more-item">
-                                <a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}"
-                                    href="{{ subitem.href }}">{{ subitem.name }}</a>
+                    <ul class="header__nav-list">
+
+                        {% for item in args.list %}
+                            <li
+                                    class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
+                                {% if item.href and item.name %}
+                                    <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}"
+                                       href="{{ item.href }}">{{ item.name }}</a>
+                                {% elseif item.name and item.sublist|length %}
+                                    <button class="header__submenu-btn js-submenu-btn">{{ item.name }}
+                                        <span class="header__sumbenu-icon">{% include "elements/icon.twig" with { name: "ic-more", modifier: "header__nav-icon" } %}</span>
+                                    </button>
+                                    <ul class="header__submenu-list">
+                                        {% for subitem in item.sublist %}
+                                            <li class="header__more-item">
+                                                <a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}"
+                                                   href="{{ subitem.href }}">{{ subitem.name }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
                             </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </li>
-                    {% endfor %}
-                </ul>
+                        {% endfor %}
+                    </ul>
                 {% endif %}
             </nav>
-    
         </div>
 
 
         <div class="header__auth">
             {% for button in args.button %}
-            <div class="header__link">
-                {% if button.href and button.name|length %}
-                <a class="header__btn btn header__btn--active js-modal-active" href="{{ button.href }}">{{ button.name }}</a>
-                {% endif %}
-            </div>
+                <div class="header__link">
+                    {% if button.href and button.name|length %}
+                        <a class="header__btn btn header__btn--active js-modal-active"
+                           href="{{ button.href }}">{{ button.name }}</a>
+                    {% endif %}
+                </div>
             {% endfor %}
         </div>
-
     </div>
 </header>
