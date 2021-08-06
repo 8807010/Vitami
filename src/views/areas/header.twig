@@ -128,7 +128,7 @@
             {% for button in args.button %}
             <div class="header__link">
                 {% if button.href and button.name|length %}
-                <a class="header__btn btn header__btn--active" href="{{ button.href }}">{{ button.name }}</a>
+                <button class="header__btn btn header__btn--active" href="{{ button.href }}">{{ button.name }}</button>
                 {% endif %}
             </div>
             {% endfor %}
