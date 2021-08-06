@@ -9,7 +9,7 @@ export default function modal(btn) {
 
     // btn.addEventListener('click', (event) => {
     //     modalWindow.setAttribute('display: flex');
-    // });
+    // }); 
 
     closeWindow.addEventListener('click', (event) => {
         modalWindow.style.cssText='display: none';
@@ -20,11 +20,9 @@ export default function modal(btn) {
     })
 
 
-
     document.addEventListener('keypress', (event) => {
         if(event.keyCode === 27) modalWindow.style.cssText='display: none';
     }); 
-
 
 
     document.addEventListener('keydown', (event) => {
@@ -32,6 +30,4 @@ export default function modal(btn) {
             modalWindow.style.cssText='display: none';
         }
         });
-
-
 }
