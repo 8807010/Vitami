@@ -2,9 +2,12 @@ export default function modal(btn) {
     let modalWindow = document.querySelector('.js-modal-window');
     let closeWindow = document.querySelector('.js-close');
 
+    const classes = {
+        openClass: 'is-open'
+    }
 
-    btn.addEventListener('click', (event) => {
-        modalWindow.style.cssText='display: flex';
+    btn.addEventListener('click', () => {
+        modalWindow.classList.add(classes.openClass)
     });
 
     // btn.addEventListener('click', (event) => {
@@ -15,8 +18,10 @@ export default function modal(btn) {
         modalWindow.style.cssText='display: none';
     });
 
-    window.addEventListener('resize', (event) => {
-        modalWindow.style.cssText='display: none'
+    window.addEventListener('resize', () => {
+        if (modalWindow.classList.contains(classes.openClass)) {
+            modalWindow.classList.remove(classes.openClass)
+        }
     })
 
 
@@ -27,7 +32,7 @@ export default function modal(btn) {
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
-            modalWindow.style.cssText='display: none';
+            modalWindow.style.cssText = 'display: none';
         }
         });
 }
