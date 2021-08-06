@@ -10,12 +10,10 @@ export default function modal(btn) {
         modalWindow.classList.add(classes.openClass)
     });
 
-    // btn.addEventListener('click', (event) => {
-    //     modalWindow.setAttribute('display: flex');
-    // }); 
-
-    closeWindow.addEventListener('click', (event) => {
-        modalWindow.style.cssText='display: none';
+    closeWindow.addEventListener('click', () => {
+        if (modalWindow.classList.contains(classes.openClass)) {
+            modalWindow.classList.remove(classes.openClass)
+        }
     });
 
     window.addEventListener('resize', () => {
@@ -25,14 +23,16 @@ export default function modal(btn) {
     })
 
 
-    document.addEventListener('keypress', (event) => {
-        if(event.keyCode === 27) modalWindow.style.cssText='display: none';
-    }); 
-
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            modalWindow.style.cssText = 'display: none';
+    document.addEventListener('keypress', () => {
+        if (event.keyCode === 27) {
+            modalWindow.classList.remove(classes.openClass)
         }
-        });
+    });
+
+
+    document.addEventListener('keydown', () => {
+        if (event.key === 'Escape') {
+            modalWindow.classList.remove(classes.openClass)
+        }
+    });
 }
