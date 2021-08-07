@@ -4,7 +4,10 @@ import scrollLock from 'scroll-lock';
 
 import header from './components/header.js';
 import menuMobile from './components/menu.js';
-import testServerRequest from './components/test-server-request.js'
+import testServerRequest from './components/test-server-request.js';
+import accordion from './components/accordion.js';
+
+
 
 svg4everybody();
 
@@ -45,6 +48,8 @@ window.app = {
     app.initModule(menuMobile, '.js-header__menu');
 
     app.initModule(testServerRequest, '.js-test-api');
+
+    app.initModule(accordion, '.js-accordion');
   }
 
 };
