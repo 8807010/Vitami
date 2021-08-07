@@ -1,0 +1,36 @@
+{% if not args %}
+	{% set args = {
+    title: "Gallery",
+    image: [
+        {
+        src: "./../../images/gallery-slider/img-1.jpg",
+        },
+        {
+        src: "./../../images/gallery-slider/img-2.jpg",
+        },
+        {
+        src: "./../../images/gallery-slider/img-3.jpg",
+        },
+    ]
+    
+} %}
+{% endif %}
+
+
+<section class="s-gallery">
+	<div class="s-gallery__container">
+    
+		{% if args.title %}
+			<h2 class="s-gallery__title">{{ args.title }}</h2>
+		{% endif %}
+
+
+		{% if args.image.src %}
+			<div class="s-gallery__wrap">
+				<img class="s-gallery__img" src="{{ args.image.src }}" alt="">
+			</div>
+		{% endif %}
+
+	</div>
+
+</section>

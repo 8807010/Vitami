@@ -1,0 +1,9 @@
+.s-gallery {
+    &__container {
+        @extend .l-container;
+    }
+
+    &__title {
+        padding-top: px-to-rem(196);
+    }
+}
