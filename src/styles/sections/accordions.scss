@@ -1,5 +1,8 @@
 .s-accordions {
     padding-top: px-to-rem(196);
+    padding-bottom: px-to-rem(64);
+    border-bottom: px-to-rem(2) solid $c-border;
+    margin-bottom: px-to-rem(64);
 
     &__container {
         @extend .l-container;
@@ -11,12 +14,12 @@
         font-weight: 600;
         font-size: $fs-heading;
         line-height: 1.2;
-        margin-bottom: px-to-rem(57);
+        margin-bottom: px-to-rem(64);
         padding-left: px-to-rem(4);
     }
 
     &__list {
-       padding-left: px-to-rem(4);
+        padding-left: px-to-rem(4);
     }
 
     &__item {
@@ -53,5 +56,24 @@
         // display: none;
         padding-top: px-to-rem(32);
         padding-right: px-to-rem(32);
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: px-to-rem(103);
+        &__title {
+            text-align: center;
+        }
+
+        &__container {
+            max-width: px-to-rem(660);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: px-to-rem(103);
+    }
+
+    @include media-breakpoint-up(xl) {
+    
     }
 }
