@@ -30,16 +30,20 @@
         padding-bottom: px-to-rem(32);
         padding-left: px-to-rem(32);
         padding-top: px-to-rem(32);
+        margin-bottom: px-to-rem(20);
+        cursor: pointer;
     }
 
     &__icon-arrow {
         margin-right: px-to-rem(20);
+        margin-left: px-to-rem(20);
     }
 
     &__btn {
         display: flex;
         justify-content: space-between;
-        align-items:center;
+        align-items: center;
+
     }
 
     &__name {
@@ -53,27 +57,51 @@
     }
 
     &__description {
-        // display: none;
+        display: none;
         padding-top: px-to-rem(32);
         padding-right: px-to-rem(32);
     }
 
+
+
     @include media-breakpoint-up(md) {
         margin-bottom: px-to-rem(103);
+
         &__title {
             text-align: center;
         }
 
-        &__container {
+        &__wrap {
             max-width: px-to-rem(660);
+            margin: 0 auto;
         }
     }
+
+
 
     @include media-breakpoint-up(lg) {
         margin-bottom: px-to-rem(103);
     }
 
+
+
     @include media-breakpoint-up(xl) {
-    
+        &__title {
+            text-align: left;
+        }
+
+        &__wrap {
+            max-width: 100%;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: px-to-rem(20);
+        }
+
+        &__item {
+            margin-bottom: 0;
+        }
     }
 }
