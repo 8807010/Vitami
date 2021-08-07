@@ -1,0 +1,74 @@
+{% if not args %}
+	{% set args = {
+        title: "Frequently Asked Questions",
+        list: [
+        {
+            name: "What can my Themeforest Template do?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "How do I get assigned a Themeforest Template?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "Where are your Themeforest Template from?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "Do you train the Themeforest Template?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "Can I use multiple templates?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "What can my Themeforest Template do?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "How do I get assigned a Themeforest Template?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        {
+            name: "Where are your Themeforest Template from?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et elit at mi sapien in ac. Amet at morbi eget maecenas sit urna ipsum feugiat. Interdum leo pulvinar integer sed aliquet. Id aliquam in ligula fermentum, ornare adipiscing massa mi est. Tristique quis pellentesque nec, eu fermentum vivamus. Malesuada vel vel leo orci, maecenas amet. Facilisis pellentesque at mattis porttitor pellentesque nullam sit. Nulla sed magna mattis phasellus ",
+        },
+        ],
+} %}
+
+{% endif %}
+
+
+<section class="s-accordions">
+	<div class="s-accordions__container">
+		{% if args.title %}
+			<h2 class="s-accordions__title el-title ">{{ args.title }}</h2>
+		{% endif %}
+
+		<div class="s-accordions__wrap">
+			{% if args.list|length %}
+				<ul class="s-accordions__list">
+					{% for item in args.list %}
+						<li class="s-accordions__item">
+							<div class="s-accordions__btn">
+								{% if item.name %}
+									<button class="s-accordions__name el-title ">{{ item.name }}</button>
+								{% endif %}
+
+								<span class="s-accordions__icon">{% include "elements/icon.twig" with { name: "ic-arrow-acc", modifier: "s-accordions__icon-arrow" } %}</span>
+							</div>
+
+							{% if item.description %}
+								<div class="s-accordions__description">{{ item.description }}</div>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+
+	</div>
+
+
+</section>

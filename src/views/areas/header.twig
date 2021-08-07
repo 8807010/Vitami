@@ -63,10 +63,12 @@
         button: [
         {
             name: "Login",
+            mode: "",
             href: "#"
         },
         {
             name: "Sign Up",
+            mode: "js-modal-active",
             href: "#"
         },
         ],
@@ -97,8 +99,7 @@
                 <ul class="header__nav-list">
     
                     {% for item in args.list %}
-                    <li
-                        class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
+                    <li class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
                         {% if item.href and item.name %}
                         <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}"
                             href="{{ item.href }}">{{ item.name }}</a>
@@ -128,7 +129,7 @@
             {% for button in args.button %}
             <div class="header__link">
                 {% if button.href and button.name|length %}
-                <a class="header__btn btn header__btn--active" href="{{ button.href }}">{{ button.name }}</a>
+                <a class="header__btn btn header__btn--active {{ button.mode }}" href="{{ button.href }}">{{ button.name }}</a>
                 {% endif %}
             </div>
             {% endfor %}

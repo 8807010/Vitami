@@ -1,0 +1,57 @@
+.s-accordions {
+    padding-top: px-to-rem(196);
+
+    &__container {
+        @extend .l-container;
+    }
+
+    &__title {
+        color: $c-brand;
+        letter-spacing: -0.005em;
+        font-weight: 600;
+        font-size: $fs-heading;
+        line-height: 1.2;
+        margin-bottom: px-to-rem(57);
+        padding-left: px-to-rem(4);
+    }
+
+    &__list {
+       padding-left: px-to-rem(4);
+    }
+
+    &__item {
+        list-style-type: none;
+        padding-left: px-to-rem(4);
+        box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
+        border-radius: px-to-rem(10);
+        padding-bottom: px-to-rem(32);
+        padding-left: px-to-rem(32);
+        padding-top: px-to-rem(32);
+    }
+
+    &__icon-arrow {
+        margin-right: px-to-rem(20);
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    &__name {
+        color: $c-text;
+        letter-spacing: -0.0025em;
+        font-weight: 700;
+        font-size: $fs-text;
+        line-height: 1.6;
+        height: 100%;
+        text-align: left;
+    }
+
+    &__description {
+        // display: none;
+        padding-top: px-to-rem(32);
+        padding-right: px-to-rem(32);
+    }
+}
