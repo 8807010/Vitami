@@ -26,9 +26,11 @@
 
 // components
 @import "components/card";
+@import "components/modal.scss";
+
 
 // header / footer / modals and other: ?
-@import "areas/header";
+@import "areas/header.scss";
 
 // sections
 @import "sections/hero";

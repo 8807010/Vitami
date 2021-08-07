@@ -1,0 +1,38 @@
+.c-modal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -1000%);
+    overflow: hidden;
+    z-index: $z-modal;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+
+    &.is-open {
+        transform: translate(50%, -50%);
+    }
+
+    &__wrap {
+        background: $c-main;
+        width: px-to-rem(600);
+        max-width: 100%;
+        min-height: 70%;
+        margin: 0 auto;
+        padding: px-to-rem(30);
+        border: px-to-rem(3) solid $c-gray;
+    }
+
+    &__btn {
+        margin: px-to-rem(15);
+        margin-bottom: px-to-rem(30);
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.6;
+        color: $c-error;
+        cursor: pointer;
+    }
+}
