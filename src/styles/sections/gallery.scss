@@ -1,9 +1,25 @@
 .s-gallery {
+    padding-top: px-to-rem(196);
+    padding-bottom: px-to-rem(108);
+    margin-bottom: px-to-rem(75);
+    border-bottom: px-to-rem(2) solid $c-border;
     &__container {
         @extend .l-container;
     }
 
     &__title {
-        padding-top: px-to-rem(196);
+        color: $c-brand;
+        letter-spacing: -0.005em;
+        font-weight: 600;
+        font-size: $fs-heading;
+        line-height: 1.2;
+        margin-bottom: px-to-rem(64);
+        text-align: center;
+
     }
+
+    &__img {
+        width: 100%;
+    }
+
 }

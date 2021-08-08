@@ -4,7 +4,29 @@ import scrollLock from 'scroll-lock';
 
 import header from './components/header.js';
 import menuMobile from './components/menu.js';
-import testServerRequest from './components/test-server-request.js'
+import testServerRequest from './components/test-server-request.js';
+import swiper from './components/swiper.js';
+
+
+
+
+
+
+ // core version + navigation, pagination modules:
+ import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+
+ // configure Swiper to use modules
+ SwiperCore.use([Navigation, Pagination]);
+
+ // init Swiper:
+ const swiper = new Swiper(...);
+
+
+
+
+
+
+
 
 svg4everybody();
 
@@ -45,6 +67,10 @@ window.app = {
     app.initModule(menuMobile, '.js-header__menu');
 
     app.initModule(testServerRequest, '.js-test-api');
+
+    app.initModule(swiper, '.swiper-container');
+
+
   }
 
 };
