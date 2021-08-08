@@ -1,0 +1,46 @@
+{% if not args %}
+	{% set args = {
+        title: "Contacts",
+        date: [
+        {
+            img: "./../../images/svg_sprite_inline/ic-addr.svg",
+            desc: "286  Dark Hollow Road, London, UK",
+        },
+        {
+            img: "./../../images/svg_sprite_inline/ic-mail.svg",
+            desc: "info@lorepsium.com",
+        },
+        {
+            img: "./../../images/svg_sprite_inline/ic-phone.svg",
+            desc: "+395-76-0651",
+        }
+
+        ]
+} %}
+{% endif %}
+
+
+<section class="s-contacts">
+	<div class="s-contacts__container">
+		{% if args.title %}
+			<h2 class="s-contacts__title el-title">{{ args.title }}</h2>
+		{% endif %}
+		<div class="s-contacts__date">
+        {% for item in args.date %}
+			<div class="s-contacts__addr">
+				{% if item.img %}
+					<img src="{{ args.date.img }}" alt="">
+				{% endif %}
+
+                {% if item.desc %}
+					<p>{{ item.desc }}</p>
+				{% endif %}
+
+
+				
+			</div>
+        {% endfor %}
+		</div>
+
+	</div>
+</section>
