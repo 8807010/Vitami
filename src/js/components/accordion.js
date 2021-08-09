@@ -1,17 +1,10 @@
-export default function accordione(btn) {
-    let accordion = document.querySelectorAll('.js-accordion');
-
-    const arrayAcc = [accordion.length];
-
-    arrayAcc.forEach(btn.addEventListener('click', () => {
-            if (accordion.classList.contains('is-open')) {
-                accordion.classList.add('is-open')
-            } else {
-                accordion.classList.remove('is-open')
-            }
-        })
-
-    );
-
-
+export default function accordion(btn) {
+    
+    btn.addEventListener('click', () => {
+        if (btn.classList.contains('is-open')) {
+            btn.classList.remove('is-open')
+        } else {
+            btn.classList.add('is-open')
+        }
+    })
 }

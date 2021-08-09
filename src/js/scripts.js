@@ -50,6 +50,7 @@ window.app = {
     app.initModule(testServerRequest, '.js-test-api');
 
     app.initModule(accordion, '.js-accordion');
+    // accordion();
   }
 
 };

@@ -32,6 +32,12 @@
         padding-top: px-to-rem(32);
         margin-bottom: px-to-rem(20);
         cursor: pointer;
+        &.is-open {
+           .s-accordions__description {
+                display: block;
+            }
+            
+        }
     }
 
     &__icon-arrow {
@@ -60,9 +66,7 @@
         display: none;
         padding-top: px-to-rem(32);
         padding-right: px-to-rem(32);
-        &.is-open {
-            display: block;
-        }
+        
     }
 
 
