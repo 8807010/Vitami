@@ -11,7 +11,7 @@
         {
         src: "./../../images/gallery-slider/img-3.jpg",
         },
-    ],
+    ]
     
 } %}
 {% endif %}
@@ -24,20 +24,30 @@
 			<h2 class="s-gallery__title">{{ args.title }}</h2>
 		{% endif %}
 
+		{% if args.img|length %}
+		{% for item in args.img %}
 
-        {# {% for args.img.src|length %}
+			<img class="s-gallery__img" src="{{ item.src }}" alt="">
+
+		{% endfor %}
+		{% endif %}
+
+{# 		
+        {% for args.img.src|length %}
 		<div class="s-gallery__picture">
-			{% if args.img.src %}
+			{% if args.img.src|length %}
 				<img class="s-gallery__img" src="{{ args.img.src }}" alt="">
 			{% endif %}
 		</div>
-        {% endfor %} #}
+        {% endfor %}
 
-		<div class="s-gallery__picture swiper-container">
+		{% endif %} #}
+
+		{# <div class="s-gallery__picture swiper-container">
 			<img src="./../../images/gallery-slider/img-3.jpg" alt="">
 			<img src="./../../images/gallery-slider/img-2.jpg" alt="">
 			<img src="./../../images/gallery-slider/img-1.jpg" alt="">
-		</div>
+		</div> #}
 
 
 	</div>
