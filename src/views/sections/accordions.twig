@@ -50,14 +50,14 @@
 			{% if args.list|length %}
 				<ul class="s-accordions__list">
 					{% for item in args.list %}
-						<li class="s-accordions__item js-accordion">
-							<div class="s-accordions__btn">
+						<li class="s-accordions__item">
+							<button class="s-accordions__btn js-accordions">
 								{% if item.name %}
-									<button class="s-accordions__name el-title ">{{ item.name }}</button>
+									<p class="s-accordions__name el-title ">{{ item.name }}</p>
 								{% endif %}
 
 								<span class="s-accordions__icon">{% include "elements/icon.twig" with { name: "ic-arrow-acc", modifier: "s-accordions__icon-arrow" } %}</span>
-							</div>
+							</button>
 
 							{% if item.description %}
 								<div class="s-accordions__description">{{ item.description }}</div>

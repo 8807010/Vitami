@@ -49,8 +49,7 @@ window.app = {
 
     app.initModule(testServerRequest, '.js-test-api');
 
-    app.initModule(accordion, '.js-accordion');
-    // accordion();
+    app.initModule(accordion, '.js-accordions');
   }
 
 };
