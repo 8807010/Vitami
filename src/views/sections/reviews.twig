@@ -1,0 +1,97 @@
+{% if not args %}
+	{% set args = {
+        title: "Customer reviews",
+        list: [
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/john.jpg",
+            },
+            name: "John Lermont",
+            job: "Director",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/johna.jpg",
+            },
+            name: "Joahna Davis",
+            job: "Manager",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/margarita.jpg",
+            },
+            name: "Margarita Levis",
+            job: "Sales Assistant",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/john.jpg",
+            },
+            name: "John Lermont",
+            job: "Director",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/johna.jpg",
+            },
+            name: "Joahna Davis",
+            job: "Manager",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/margarita.jpg",
+            },
+            name: "Margarita Levis",
+            job: "Sales Assistant",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/john.jpg",
+            },
+            name: "John Lermont",
+            job: "Director",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/johna.jpg",
+            },
+            name: "Joahna Davis",
+            job: "Manager",
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sit et laoreet urna turpis integer tortor, mus. Dolor sit amet, consectetur adipiscing elit.",
+            img: {
+                src: "./../../images/reviews/margarita.jpg",
+            },
+            name: "Margarita Levis",
+            job: "Sales Assistant",
+        }
+        ]
+} %}
+{% endif %}
+
+<section class="s-reviews">
+	<div class="s-reviews__container">
+		{% if args.title %}
+			<h2 class="s-reviews__title el-title ">{{ args.title }}</h2>
+		{% endif %}
+
+        {% if args.list|length %}
+        <ul class="s-reviews__list">
+            {% for item in args.list %}
+            <li class="s-reviews__item">
+                {% include "components/review.twig" with item %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+	</div>
+</section>
