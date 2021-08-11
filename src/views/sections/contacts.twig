@@ -14,32 +14,98 @@
             img: "./../../images/svg_sprite_inline/ic-phone.svg",
             desc: "+395-76-0651",
         }
-
-        ]
+        ],
+        messageTitle: "Send Us a Message",
+        btnMessege: {
+            name: "Send Message",
+            href: "#"
+        },
+        subscribe: {
+            title: "Subscribe Our News",
+            img: "./../../images/contacts/subscribe.jpg",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            btn: "Send"
+        }
 } %}
 {% endif %}
 
 
 <section class="s-contacts">
 	<div class="s-contacts__container">
-		{% if args.title %}
-			<h2 class="s-contacts__title el-title">{{ args.title }}</h2>
-		{% endif %}
-		<div class="s-contacts__date">
-        {% for item in args.date %}
-			<div class="s-contacts__addr">
-				{% if item.img %}
-					<img src="{{ args.date.img }}" alt="">
-				{% endif %}
 
-                {% if item.desc %}
-					<p>{{ item.desc }}</p>
-				{% endif %}
+		<div class="s-contacts__inner">
+			{% if args.title %}
+				<h2 class="s-contacts__title el-title">{{ args.title }}</h2>
+			{% endif %}
 
+			<div class="s-contacts__locacion">
+				<div class="s-contacts__date">
+					{% for item in args.date %}
+						<div class="s-contacts__addr">
+							{% if item.img %}
+								<img class="s-contacts__addr-icon" src="{{ item.img }}" alt="">
+							{% endif %}
 
-				
+							{% if item.desc %}
+								<p class="s-contacts__addr-name el-text">{{ item.desc }}</p>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="s-contacts__map"></div>
 			</div>
-        {% endfor %}
+		</div>
+
+
+		<div class="s-contacts__message">
+			{% if args.messageTitle %}
+				<h3 class="s-contacts__message-title el-title">{{ args.messageTitle }}</h3>
+			{% endif %}
+
+			<div class="s-contacts__date">
+				<form class="s-contacts__form" action="">
+					<div class="s-contacts__inputs">
+						<input class="s-contacts__input" type="text" placeholder="Your name">
+						<input class="s-contacts__input" type="text" placeholder="Your email">
+					</div>
+
+					<textarea class="s-contacts__textarea" name="textarea" id="textarea" placeholder="Text field"></textarea>
+				</form>
+
+				{% if args.btnMessege.href and args.btnMessege.name %}
+					<button class="s-contacts__date-btn btn" href="{{ args.btnMessege.href }}">{{ args.btnMessege.name }}</button>
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="s-contacts__subscribe">
+			{% if args.subscribe.img %}
+				<div class="s-contacts__subscribe-pic">
+					<img class="s-contacts__subscribe-img" src="{{ args.subscribe.img }}" alt="">
+				</div>
+			{% endif %}
+
+			<div class="s-contacts__subscribe-news">
+				{% if args.subscribe.title %}
+					<h3 class="s-contacts__subscribe-title el-title">{{ args.subscribe.title }}</h3>
+				{% endif %}
+
+				{% if args.subscribe.desc %}
+					<div class="s-contacts__subscribe-desc el-subtitle">{{ args.subscribe.desc }}</div>
+				{% endif %}
+
+				<div class="s-contacts__subscribe-send">
+					<form class="s-contacts__subscribe-form">
+						<input class="s-contacts__subscribe-input" type="text" name="" id="" placeholder="Your email">
+					</form>
+
+					{% if args.subscribe.btn %}
+						<button class="s-contacts__subscribe-btn btn" href="#">{{ args.subscribe.btn }}</button>
+					{% endif %}
+				</div>
+
+			</div>
 		</div>
 
 	</div>
