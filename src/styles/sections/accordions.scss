@@ -27,6 +27,25 @@
         box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
         border-radius: px-to-rem(10);
         margin-bottom: px-to-rem(20);
+        height: max-content;
+        &.is-open {
+            .s-accordions__description {
+                display: block;
+            }
+            .s-accordions__icon-arrow {
+                transform: rotate(90deg);
+                transition: transform 0.3s ease;
+            }
+            .s-accordions__name {
+                color: $c-brand;
+                transition: color 0.3s ease;
+            }
+        }
+    }
+
+    &__icon-arrow {
+        color: $c-brand;
+        transition: transform 0.3s ease;
     }
 
     &__icon-arrow {
@@ -43,11 +62,6 @@
         align-items: center;
         cursor: pointer;
         width: 100%;
-        &.is-open {
-            .s-accordions__description {
-                display: block;
-            }
-        }
     }
 
     &__description {
@@ -65,6 +79,7 @@
         line-height: 1.6;
         height: 100%;
         text-align: left;
+        transition: color 0.3s ease;
     }
 
 
@@ -103,6 +118,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: px-to-rem(20);
+     
         }
 
         &__item {

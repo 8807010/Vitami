@@ -50,8 +50,9 @@
 			{% if args.list|length %}
 				<ul class="s-accordions__list">
 					{% for item in args.list %}
-						<li class="s-accordions__item">
-							<button class="s-accordions__btn js-accordions">
+
+						<li class="s-accordions__item" id="accord_{{ loop.index }}">
+							<button class="s-accordions__btn js-accordions" id="{{ loop.index }}">
 								{% if item.name %}
 									<p class="s-accordions__name el-title ">{{ item.name }}</p>
 								{% endif %}
