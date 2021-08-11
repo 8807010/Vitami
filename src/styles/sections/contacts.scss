@@ -61,6 +61,7 @@
         width: 100%;
         max-width: px-to-rem(320);
         margin-bottom: px-to-rem(24);
+        outline-color: $c-bg-main;
     }
 
     &__textarea {
@@ -77,6 +78,7 @@
         padding-left: px-to-rem(24);
         margin-bottom: px-to-rem(24);
         resize: none;
+        outline-color: $c-bg-main;
     }
 
     &__message {
@@ -134,6 +136,7 @@
         letter-spacing: -0.0025em;
         color: $c-text;
         margin-bottom: px-to-rem(24);
+        outline-color: $c-bg-main;
     }
 
     &__subscribe-btn {
@@ -208,6 +211,7 @@
         &__subscribe-btn {
             margin-bottom: 0;
             min-width: px-to-rem(135);
+            margin-left: px-to-rem(-10);
         }
     }
 
