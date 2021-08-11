@@ -30,6 +30,7 @@
   &:hover {
     color: $c-brand;
     background: $c-main;
+    transition: all 0.3s ease;
   }
 
   &:focus,
