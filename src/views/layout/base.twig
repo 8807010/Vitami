@@ -5,15 +5,17 @@
 
 {% block template %}
 
-    {% include 'areas/header.twig' %}
+	{% include 'areas/header.twig' %}
 
-    <main class="{{ main_class }}">
-        {% block content %}
-            {{ content }}
-        {% endblock %}
-    </main>
+	{% include "components/modal.twig" %}
 
-    {% include 'areas/footer.twig' %}
+	<main class="{{ main_class }}">
+		{% block content %}
+			{{ content }}
+		{% endblock %}
+	</main>
+
+	{% include 'areas/footer.twig' %}
 
 
 {% endblock %}
