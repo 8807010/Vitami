@@ -14,6 +14,10 @@
         margin-bottom: px-to-rem(64);
     }
 
+    &__container {
+        @extend .l-container;
+    }
+
     &__item {
         list-style-type: none;
         margin: px-to-rem(20);
@@ -23,6 +27,8 @@
     &__list {
         display: flex;
         overflow-x: scroll;
+        max-width: px-to-rem(1340);
+        margin: 0 auto;
     }
 
     @include media-breakpoint-up(md) {
@@ -31,13 +37,9 @@
     }
 
 
-    // @include media-breakpoint-up(lg) {
-    //     &__container {
-    //         @extend .l-container;
-    //     }
-
-    //     &__title {
-    //         text-align: left;
-    //     }
-    // }
+    @include media-breakpoint-up(md) {
+        &__title {
+            text-align: left;
+        }
+    }
 }
