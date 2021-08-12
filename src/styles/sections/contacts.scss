@@ -29,13 +29,8 @@
     }
 
     &__map {
-        background-image: url(./../../images/contacts/map.jpg);
-        background-repeat: no-repeat;
-        background-position: 80%;
-        background-size: cover;
         width: 100%;
         max-width: px-to-rem(660);
-        height: px-to-rem(320);
         margin-bottom: px-to-rem(64);
     }
 
@@ -47,11 +42,16 @@
         margin-bottom: px-to-rem(32);
     }
 
+    &__form {
+        max-width: px-to-rem(660);
+        text-align: center;
+        margin: 0 auto;
+    }
+
     &__input {
         background-color: $c-bg-footer;
         padding-left: px-to-rem(24);
         height: px-to-rem(50);
-        width: px-to-rem(320);
         border: none;
         border-radius: px-to-rem(8);
         font-size: $fs-text;
@@ -70,7 +70,6 @@
         letter-spacing: -0.0025em;
         color: $c-text;
         width: 100%;
-        max-width: px-to-rem(660);
         height: px-to-rem(206);
         border-radius: px-to-rem(10);
         border: px-to-rem(2) solid rgba(192, 206, 190, 0.5);
@@ -98,7 +97,7 @@
         padding: px-to-rem(16);
     }
 
-    &__subscribe-pic {
+    &__subscribe-picture {
         margin-bottom: px-to-rem(24);
     }
 
@@ -139,13 +138,18 @@
         outline-color: $c-bg-main;
     }
 
-    &__subscribe-btn {
-        height: px-to-rem(50);
-        width: px-to-rem(256);
-        margin-bottom: px-to-rem(32);
+    &__subscribe-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-
+    &__subscribe-btn {
+        height: px-to-rem(50);
+        max-width: px-to-rem(256);
+        width: 100%;
+        margin-bottom: px-to-rem(32);
+    }
 
     @include media-breakpoint-up(md) {
         padding-bottom: px-to-rem(111);
@@ -163,17 +167,15 @@
             margin-bottom: px-to-rem(56);
         }
 
-        &__input {
-            width: 100%;
-
-            &:first-child {
-                margin-right: px-to-rem(20);
-            }
-        }
+        // &__input {
+        //     margin-right: px-to-rem(20);
+        // }
 
         &__subscribe-img {
-            width: px-to-rem(160);
-            height: px-to-rem(160);
+            max-width: px-to-rem(160);
+            max-height: px-to-rem(160);
+            width: 100%;
+            height: 100%;
             object-fit: fill;
         }
 
@@ -198,7 +200,6 @@
         }
 
         &__subscribe-send {
-            display: flex;
             max-width: px-to-rem(420);
             margin-bottom: px-to-rem(16);
         }
@@ -210,17 +211,21 @@
 
         &__subscribe-btn {
             margin-bottom: 0;
-            min-width: px-to-rem(135);
+            max-width: px-to-rem(135);
             margin-left: px-to-rem(-10);
+        }
+
+        &__subscribe-form {
+            flex-direction: row;
         }
     }
 
-
     @include media-breakpoint-up(xl) {
 
-        &__locacion {
+        &__location {
             display: flex;
             justify-content: space-between;
+            margin-bottom: px-to-rem(64);
         }
 
         &__inner {
@@ -232,16 +237,16 @@
         }
 
         &__date {
-            padding-top: px-to-rem(32);
             margin-bottom: 0;
+        }
+
+        &__form {
+            margin: 0;
+            text-align: left;
         }
 
         &__map {
             margin-bottom: 0;
-        }
-
-        &__locacion {
-            margin-bottom: px-to-rem(64);
         }
 
         &__message {
