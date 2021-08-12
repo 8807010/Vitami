@@ -1,5 +1,4 @@
 export default function accordion(btn) {
-
     const classes = {
         openClass: 'is-open'
     }

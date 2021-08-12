@@ -4,6 +4,8 @@
     border-bottom: px-to-rem(2) solid $c-border;
     margin-bottom: px-to-rem(64);
 
+    $this: &;
+
     &__container {
         @extend .l-container;
     }
@@ -29,14 +31,14 @@
         margin-bottom: px-to-rem(20);
         height: max-content;
         &.is-open {
-            .s-accordions__description {
+            #{$this}__description {
                 display: block;
             }
-            .s-accordions__icon-arrow {
+            #{$this}__icon-arrow {
                 transform: rotate(90deg);
                 transition: transform 0.3s ease;
             }
-            .s-accordions__name {
+            #{$this}__name {
                 color: $c-brand;
                 transition: color 0.3s ease;
             }
@@ -82,8 +84,6 @@
         transition: color 0.3s ease;
     }
 
-
-
     @include media-breakpoint-up(md) {
         margin-bottom: px-to-rem(103);
 
@@ -97,13 +97,9 @@
         }
     }
 
-
-
     @include media-breakpoint-up(lg) {
         margin-bottom: px-to-rem(103);
     }
-
-
 
     @include media-breakpoint-up(xl) {
         &__title {
@@ -118,7 +114,6 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: px-to-rem(20);
-     
         }
 
         &__item {
