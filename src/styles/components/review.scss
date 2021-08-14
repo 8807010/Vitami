@@ -1,0 +1,59 @@
+.c-review {
+    background: $c-main;
+    border-radius: px-to-rem(10);
+    box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
+    padding: px-to-rem(32);
+    width: px-to-rem(320);
+    max-width: 100%;
+
+    &__icon {
+        background-image: url(./../../images/reviews/btn.png);
+        background-repeat: no-repeat;
+        background-size: px-to-rem(50);
+        background-position: center;
+        width: px-to-rem(50);
+        height: px-to-rem(50);
+        margin-bottom: px-to-rem(24);
+    }
+
+    &__text {
+        font-size: $fs-text;
+        line-height: 1.6;
+        letter-spacing: -0.0025em;
+        color: $c-text;
+        margin-bottom: px-to-rem(24);
+    }
+
+    &__picture {
+        width: px-to-rem(50);
+    }
+
+    &__person {
+        display: flex;
+        align-items: center;
+    }
+
+    &__person-date {
+        margin-left: px-to-rem(24);
+    }
+
+    &__name {
+        font-size: $fs-text;
+        font-weight: 700;
+        line-height: 1.6;
+        letter-spacing: -0.0025em;
+        color: $c-title;
+    }
+
+    &__job {
+        font-weight: 300;
+        font-size: px-to-rem(12);
+        line-height: 1.55;
+        letter-spacing: -0.0025em;
+        color: $c-text;
+    }
+
+
+
+
+}
