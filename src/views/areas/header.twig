@@ -99,8 +99,7 @@
                     <ul class="header__nav-list">
 
                         {% for item in args.list %}
-                            <li
-                                    class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
+                            <li class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
                                 {% if item.href and item.name %}
                                     <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}"
                                        href="{{ item.href }}">{{ item.name }}</a>
