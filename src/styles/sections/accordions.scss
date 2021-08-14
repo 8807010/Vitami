@@ -1,0 +1,123 @@
+.s-accordions {
+    padding-top: px-to-rem(196);
+    padding-bottom: px-to-rem(64);
+    border-bottom: px-to-rem(2) solid $c-border;
+    margin-bottom: px-to-rem(64);
+
+    $this: &;
+
+    &__container {
+        @extend .l-container;
+    }
+
+    &__title {
+        color: $c-brand;
+        letter-spacing: -0.005em;
+        font-weight: 600;
+        font-size: $fs-heading;
+        line-height: 1.2;
+        margin-bottom: px-to-rem(64);
+        padding-left: px-to-rem(4);
+    }
+
+    &__list {
+        padding-left: px-to-rem(4);
+    }
+
+    &__item {
+        list-style-type: none;
+        box-shadow: px-to-rem(4) px-to-rem(8) px-to-rem(25) rgba(65, 65, 65, 0.1);
+        border-radius: px-to-rem(10);
+        margin-bottom: px-to-rem(20);
+        height: max-content;
+        &.is-open {
+            #{$this}__description {
+                display: block;
+            }
+            #{$this}__icon-arrow {
+                transform: rotate(90deg);
+                transition: transform 0.3s ease;
+            }
+            #{$this}__name {
+                color: $c-brand;
+                transition: color 0.3s ease;
+            }
+        }
+    }
+
+    &__icon-arrow {
+        color: $c-brand;
+        transition: transform 0.3s ease;
+    }
+
+    &__icon-arrow {
+        margin-right: px-to-rem(20);
+        margin-left: px-to-rem(20);
+    }
+
+    &__btn {
+        padding-bottom: px-to-rem(32);
+        padding-left: px-to-rem(32);
+        padding-top: px-to-rem(32);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    &__description {
+        display: none;
+        padding-right: px-to-rem(32);
+        padding-left: px-to-rem(32);
+        padding-bottom: px-to-rem(32);
+    }
+
+    &__name {
+        color: $c-text;
+        letter-spacing: -0.0025em;
+        font-weight: 700;
+        font-size: $fs-text;
+        line-height: 1.6;
+        height: 100%;
+        text-align: left;
+        transition: color 0.3s ease;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: px-to-rem(103);
+
+        &__title {
+            text-align: center;
+        }
+
+        &__wrap {
+            max-width: px-to-rem(660);
+            margin: 0 auto;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: px-to-rem(103);
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__title {
+            text-align: left;
+        }
+
+        &__wrap {
+            max-width: 100%;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: px-to-rem(20);
+        }
+
+        &__item {
+            margin-bottom: 0;
+        }
+    }
+}
