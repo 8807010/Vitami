@@ -1,7 +1,7 @@
 {% if not args %}
 	{% set args = {
         title: "Contacts",
-        date: [
+        data: [
         {
             img: "./../../images/svg_sprite_inline/ic-addr.svg",
             desc: "286  Dark Hollow Road, London, UK",
@@ -43,14 +43,14 @@
 
 			<div class="s-contacts__location">
 				<div class="s-contacts__date">
-					{% for item in args.date %}
+					{% for item in args.data %}
 						<div class="s-contacts__addr">
 							{% if item.img %}
 								<img class="s-contacts__addr-icon" src="{{ item.img }}" alt="">
 							{% endif %}
 
 							{% if item.desc and item.link %}
-								<a class="s-contacts__addr-name el-text" href="{{ item.link  }}">{{ item.desc }}</a>
+								<a class="s-contacts__addr-name el-text" href="{{ item.link }}">{{ item.desc }}</a>
 							{% endif %}
 						</div>
 					{% endfor %}
@@ -67,13 +67,13 @@
 				<h3 class="s-contacts__message-title el-title">{{ args.messageTitle }}</h3>
 			{% endif %}
 
-			<div class="s-contacts__date">
+			<div class="s-contacts__data">
 				<form class="s-contacts__form" action="">
 					<div class="s-contacts__inputs">
-						<label>
+						<label class="s-contacts__label">
 							<input class="s-contacts__input" type="text" placeholder="Your name">
 						</label>
-						<label>
+						<label class="s-contacts__label">
 							<input class="s-contacts__input" type="text" placeholder="Your email">
 						</label>
 					</div>
@@ -81,7 +81,7 @@
 					<textarea class="s-contacts__textarea" name="textarea" id="textarea" placeholder="Text field"></textarea>
 
 					{% if args.btnMessege.href and args.btnMessege.name %}
-						<button type="submit" class="s-contacts__date-btn btn" href="{{ args.btnMessege.href }}">{{ args.btnMessege.name }}</button>
+						<button type="submit" class="s-contacts__data-btn btn" href="{{ args.btnMessege.href }}">{{ args.btnMessege.name }}</button>
 					{% endif %}
 				</form>
 			</div>
@@ -105,11 +105,13 @@
 
 				<div class="s-contacts__subscribe-send">
 					<form class="s-contacts__subscribe-form">
-						<input class="s-contacts__subscribe-input" type="text" name="" id="" placeholder="Your email">
-						
-					{% if args.subscribe.btn %}
-						<button type="submit" class="s-contacts__subscribe-btn btn" href="#">{{ args.subscribe.btn }}</button>
-					{% endif %}
+						<label>
+							<input class="s-contacts__subscribe-input" type="text" name="" id="" placeholder="Your email">
+						</label>
+
+						{% if args.subscribe.btn %}
+							<button type="submit" class="s-contacts__subscribe-btn btn" href="#">{{ args.subscribe.btn }}</button>
+						{% endif %}
 					</form>
 
 				</div>
