@@ -12,7 +12,7 @@
 .btn {
   font-family: $font-base;
   font-weight: 600;
-  border: 1px solid $c-brand;
+  border: 1px solid $c-brandStart;
   box-shadow: none;
   border-radius: 0.25em;
   min-width: 210px;
@@ -27,21 +27,21 @@
   position: relative;
   padding: 0.875em 2em;
   overflow: hidden;
-  background: $c-brand;
-  color: $c-white;
+  background: $c-brandStart;
+  color: $c-main;
 
   &:hover {
-    color: $c-brand;
-    background: $c-white;
+    color: $c-brandStart;
+    background: $c-main;
   }
 
   &:focus,
   &:active {
-    color: $c-brand;
-    background: $c-white;
+    color: $c-brandStart;
+    background: $c-main;
   }
   &:disabled,
   &.disabled {
-    color: rgba($c-black, 0.4);
+    color: rgba($c-reverse, 0.4);
   }
 }

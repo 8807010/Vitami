@@ -1,8 +1,8 @@
 .header {
 
-  background-color: $c-white;
+  background-color: $c-main;
   @include paddingResponsive($s-header-height, top);
-  $header-shadow: 0 px-to-rem(2) px-to-rem(4) rgba($c-black, 0.15);
+  $header-shadow: 0 px-to-rem(2) px-to-rem(4) rgba($c-reverse, 0.15);
 
   &-main {
     position: fixed;
@@ -58,7 +58,7 @@
       }
 
       #{$mainMenu}.is-open & {
-        //color: $c-white;
+        //color: $c-main;
         &-open {
           opacity: 0;
         }
@@ -87,7 +87,7 @@
   }
 
   &-nav {
-    background: $c-white;
+    background: $c-main;
     position: fixed;
     left: 0;
     width: 100%;
@@ -149,16 +149,16 @@
       }
 
       &--btn {
-        color: $c-white;
-        background: $c-black;
+        color: $c-main;
+        background: $c-reverse;
         margin-left: 0;
         margin-right: 0;
         padding: px-to-rem(5) px-to-rem(33);
         border-radius: px-to-rem(10);
         transition: background-color 0.3s ease, color 0.3s ease;
         &:hover {
-          color: $c-white;
-          background: $c-black;
+          color: $c-main;
+          background: $c-reverse;
           box-shadow: none;
         }
       }
@@ -233,7 +233,7 @@
       $mainBlock: #{&};
       height: map_get($s-header-height, lg);
       &:not(:last-child) {
-        box-shadow:  0 0 0 rgba($c-white, 0);
+        box-shadow:  0 0 0 rgba($c-main, 0);
         //box-shadow: $header-shadow;
         &.is-scroll {
           box-shadow:  $header-shadow;
