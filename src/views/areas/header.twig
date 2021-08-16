@@ -61,16 +61,16 @@
 
 
         button: [
-        {
-            name: "Login",
-            mode: "",
-            href: "#"
-        },
-        {
-            name: "Sign Up",
-            mode: "js-modal-active",
-            href: "#"
-        },
+            {
+                name: "Login",
+                mode: "",
+                href: "#"
+            },
+            {
+                name: "Sign Up",
+                mode: "js-modal-active",
+                href: "#"
+            },
         ],
     } %}
 {% endif %}
@@ -96,22 +96,26 @@
 
             <nav class="header__nav js-header-modal">
                 {% if args.list|length %}
-                <ul class="header__nav-list">
-    
-                    {% for item in args.list %}
-                    <li class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
-                        {% if item.href and item.name %}
-                        <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}"
-                            href="{{ item.href }}">{{ item.name }}</a>
-                        {% elseif item.name and item.sublist|length %}
-                        <button class="header__submenu-btn js-submenu-btn">{{ item.name }}
-                            <span class="header__sumbenu-icon">{% include "elements/icon.twig" with { name: "ic-more", modifier: "header__nav-icon" } %}</span>
-                        </button>
-                        <ul class="header__submenu-list">
-                            {% for subitem in item.sublist %}
-                            <li class="header__more-item">
-                                <a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}"
-                                    href="{{ subitem.href }}">{{ subitem.name }}</a>
+                    <ul class="header__nav-list">
+
+                        {% for item in args.list %}
+                            <li class="header__nav-item {% if item.name and item.sublist|length %}header__submenu js-submenu{% endif %}">
+                                {% if item.href and item.name %}
+                                    <a class="header__nav-link {% if item.isActive %} header__nav-link--active {% endif %}"
+                                       href="{{ item.href }}">{{ item.name }}</a>
+                                {% elseif item.name and item.sublist|length %}
+                                    <button class="header__submenu-btn js-submenu-btn">{{ item.name }}
+                                        <span class="header__sumbenu-icon">{% include "elements/icon.twig" with { name: "ic-more", modifier: "header__nav-icon" } %}</span>
+                                    </button>
+                                    <ul class="header__submenu-list">
+                                        {% for subitem in item.sublist %}
+                                            <li class="header__more-item">
+                                                <a class="header__more-link {% if subitem.isActive %} header__more-link--active {% endif %}"
+                                                   href="{{ subitem.href }}">{{ subitem.name }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
                             </li>
                         {% endfor %}
                     </ul>
@@ -122,11 +126,11 @@
 
         <div class="header__auth">
             {% for button in args.button %}
-            <div class="header__link">
-                {% if button.href and button.name|length %}
-                <a class="header__btn btn header__btn--active {{ button.mode }}" href="{{ button.href }}">{{ button.name }}</a>
-                {% endif %}
-            </div>
+                <div class="header__link">
+                    {% if button.href and button.name|length %}
+                        <a class="header__btn btn header__btn--active {{ button.mode }}" href="{{ button.href }}">{{ button.name }}</a>
+                    {% endif %}
+                </div>
             {% endfor %}
         </div>
     </div>
