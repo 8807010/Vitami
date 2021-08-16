@@ -1,18 +1,15 @@
 // Sizes
 
 $s-content-padding: (
-  xs: 20px,
-  md: 40px
+  xsm: 18px,
+  xxl: 217px
 );
 
 
-$s-inner-width: 1140px;
-$s-inner-width-md: 700px;
+$s-offset: px-to-rem(18);
 
-$s-content: $s-inner-width + 2 * map_get($s-content-padding, md);
-$s-content-md: $s-inner-width-md + 2 * map_get($s-content-padding, md);
+$s-inner-width: px-to-rem(1490);
 
-$s-header-height: (
-        xs: px-to-rem(56),
-        lg: px-to-rem(76),
-);
+$s-content: $s-inner-width+2 * $s-offset;
+
+$s-header-height: px-to-rem(60);
