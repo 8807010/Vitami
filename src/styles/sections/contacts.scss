@@ -25,6 +25,8 @@
 
         &-icon {
             margin-right: px-to-rem(24);
+            width: 100%;
+            max-width: px-to-rem(20);
         }
     }
 
@@ -51,7 +53,9 @@
     &__input {
         background-color: $c-bg-footer;
         padding-left: px-to-rem(24);
-        height: px-to-rem(50);
+        padding-top: px-to-rem(10);
+        padding-bottom: px-to-rem(10);
+        width: px-to-rem(320);
         border: none;
         border-radius: px-to-rem(8);
         font-size: $fs-text;
@@ -161,6 +165,14 @@
 
         &__addr-name {
             font-size: $fs-headline;
+        }
+
+        &__input {
+            width: 48%;
+
+            &:first-child {
+                margin-right: px-to-rem(20);
+            }
         }
 
         &__data {
