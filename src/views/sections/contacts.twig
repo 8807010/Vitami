@@ -1,0 +1,119 @@
+{% if not args %}
+	{% set args = {
+        title: "Contacts",
+        data: [
+        {
+            img: "./../../images/svg_sprite_inline/ic-addr.svg",
+            desc: "286  Dark Hollow Road, London, UK",
+			link: "geo:"
+        },
+        {
+            img: "./../../images/svg_sprite_inline/ic-mail.svg",
+            desc: "info@lorepsium.com",
+			link: "mailto:info@lorepsium.com"
+        },
+        {
+            img: "./../../images/svg_sprite_inline/ic-phone.svg",
+            desc: "+395-76-0651",
+			link: "tel:+395-76-0651"
+        }
+        ],
+        messageTitle: "Send Us a Message",
+        btnMessege: {
+            name: "Send Message",
+            href: "#"
+        },
+        subscribe: {
+            title: "Subscribe Our News",
+            img: "./../../images/contacts/subscribe.jpg",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            btn: "Send"
+        }
+} %}
+{% endif %}
+
+
+<section class="s-contacts">
+	<div class="s-contacts__container">
+
+		<div class="s-contacts__inner">
+			{% if args.title %}
+				<h2 class="s-contacts__title el-title">{{ args.title }}</h2>
+			{% endif %}
+
+			<div class="s-contacts__location">
+				<div class="s-contacts__date">
+					{% for item in args.data %}
+						<div class="s-contacts__addr">
+							{% if item.img %}
+								<img class="s-contacts__addr-icon" src="{{ item.img }}" alt="">
+							{% endif %}
+
+							{% if item.desc and item.link %}
+								<a class="s-contacts__addr-name el-text" href="{{ item.link }}">{{ item.desc }}</a>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="s-contacts__map">
+					<img src="./../../images/contacts/map.jpg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="s-contacts__message">
+			{% if args.messageTitle %}
+				<h3 class="s-contacts__message-title el-title">{{ args.messageTitle }}</h3>
+			{% endif %}
+
+			<div class="s-contacts__data">
+				<form class="s-contacts__form" action="">
+					<div class="s-contacts__inputs">
+						<input class="s-contacts__input" type="text" placeholder="Your name">
+						<input class="s-contacts__input" type="text" placeholder="Your email">
+					</div>
+
+					<textarea class="s-contacts__textarea" name="textarea" id="textarea" placeholder="Text field"></textarea>
+
+					{% if args.btnMessege.href and args.btnMessege.name %}
+						<button type="submit" class="s-contacts__data-btn btn" href="{{ args.btnMessege.href }}">{{ args.btnMessege.name }}</button>
+					{% endif %}
+				</form>
+			</div>
+		</div>
+
+		<div class="s-contacts__subscribe">
+			{% if args.subscribe.img %}
+				<div class="s-contacts__subscribe-picture">
+					<img class="s-contacts__subscribe-img" src="{{ args.subscribe.img }}" alt="">
+				</div>
+			{% endif %}
+
+			<div class="s-contacts__subscribe-news">
+				{% if args.subscribe.title %}
+					<h3 class="s-contacts__subscribe-title el-title">{{ args.subscribe.title }}</h3>
+				{% endif %}
+
+				{% if args.subscribe.desc %}
+					<div class="s-contacts__subscribe-desc el-subtitle">{{ args.subscribe.desc }}</div>
+				{% endif %}
+
+				<div class="s-contacts__subscribe-send">
+					<form class="s-contacts__subscribe-form">
+						<label>
+							<input class="s-contacts__subscribe-input" type="text" name="" id="" placeholder="Your email">
+						</label>
+
+						{% if args.subscribe.btn %}
+							<button type="submit" class="s-contacts__subscribe-btn btn" href="#">{{ args.subscribe.btn }}</button>
+						{% endif %}
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
