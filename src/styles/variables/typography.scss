@@ -2,21 +2,34 @@
 
 // Fonts:
 $font-base: 'Montserrat', sans-serif;
+$font-text: 'Montserrat', sans-serif;
 
 
 // Font sizes:
 
+$fs-button: px-to-rem(14);
+
+$fs-footer-policy: px-to-rem(15);
+
 $fs-base: px-to-rem(16);
 
-$fs-text:(
-    xs: px-to-rem(16),
-    md: px-to-rem(18),
-);
+$fs-footer-nav :px-to-rem(18);
 
-$fs-title-1: (
-        xs: px-to-rem(36),
-        md: px-to-rem(44),
-        xl: px-to-rem(48)
-);
+$fs-menu: px-to-rem(20);
 
-$fs-title-2: px-to-rem(24);
+$fs-text: px-to-rem(22);
+
+$fs-subtitle: px-to-rem(24);
+
+$fs-reviews: px-to-rem(28);
+
+$fs-title: px-to-rem(34);
+
+$fs-main-title: px-to-rem(44);
+
+
+
+
+
+
+

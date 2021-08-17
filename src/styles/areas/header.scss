@@ -1,10 +1,18 @@
 .header {
-  height: $s-header-height;
   background-color: plum;
   padding: 0 px-to-rem(26);
+  padding-top: px-to-rem(16);
+  padding-bottom: 64px;
 
   &__nav {
     display: none;
+    
+    &-link {
+      text-decoration: none;
+      font-family: Helvetica Neue LT Std;
+      font-size: px-to-rem(20);
+      line-height: px-to-rem(24);
+    }
   }
 
   &__wrap {
@@ -14,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    transform: translateY(50%);
+  
   }
 
   &__logo {
@@ -48,17 +56,6 @@
   }
 
   @include media-breakpoint-up(lg) {
-
-    &__wrap {
-      position: relative;
-    }
-
-    &__logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
 
     &__nav {
       display: flex;

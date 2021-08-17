@@ -38,7 +38,7 @@
 						{% for item in args.list %}
 							<li class="header__nav-list">
 								{% if item.href and item.name %}
-									<a href="{{ item.href }}">{{ item.name }}</a>
+									<a class="header__nav-link" href="{{ item.href }}">{{ item.name }}</a>
 								{% endif %}
 							</li>
 						{% endfor %}
