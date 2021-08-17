@@ -17,6 +17,7 @@
                 href: "#",
                 name: "Contacts",
             },
+			
         ],
         logo: {
             src: "./../../images/svg_sprite_inline/ic-logoVitami.svg",
@@ -38,7 +39,7 @@
 						{% for item in args.list %}
 							<li class="header__nav-list">
 								{% if item.href and item.name %}
-									<a href="{{ item.href }}">{{ item.name }}</a>
+									<a class="header__nav-link" href="{{ item.href }}">{{ item.name }}</a>
 								{% endif %}
 							</li>
 						{% endfor %}
@@ -46,7 +47,7 @@
 				{% endif %}
 			</nav>
 			<div class="header__burger">
-				<img class="header__burger" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
+				<img class="header__burger-img" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
 			</div>
 		</div>
 
