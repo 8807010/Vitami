@@ -1,0 +1,22 @@
+{% if not args %}
+	{% set args = {
+        description: "Uniquely natural supplements designed for you, delivered to you.",
+        logo: {
+            src: "./../../images/hero.jpg",
+        }
+    } %}
+{% endif %}
+
+<section class="s-hero">
+	<div>
+		{% if args.description %}
+			<div class="s-hero__description">{{ args.description }}</div>
+		{% endif %}
+		
+		{% if args.logo.src %}
+			<div class="s-hero__background">
+				<img class="s-hero__img" src="{{ args.logo.src }}" alt="">
+			</div>
+		{% endif %}
+	</div>
+</section>
