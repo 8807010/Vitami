@@ -1,0 +1,54 @@
+.s-hero {
+  position: relative;
+  min-height: px-to-rem(448);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: 64% 58%;
+  align-items: center;
+  margin-top: -46px;
+  z-index: -1;
+
+  &__description {
+    color: $c-main;
+    font-family: Arial;
+    font-size: $fs-reviews;
+    line-height: px-to-rem(33);
+    text-align: center;
+    text-transform: uppercase;
+    max-width: px-to-rem(734);
+    margin: 0 auto;
+    padding: 0 px-to-rem(18);
+    padding-bottom: px-to-rem(74);
+  }
+
+  @include media-breakpoint-up(md) {
+    // min-height: px-to-rem(550);
+    justify-content: center;
+    justify-content: flex-start;
+
+    &__description {
+      padding-top: px-to-rem(234);
+  }
+}
+
+  @include media-breakpoint-up(lg) {
+    min-height: px-to-rem(775);
+    background-position: 50% 0;
+    flex-direction: row;
+
+    &__description {
+      width: 100%;
+      text-align: left;
+      font-size: $fs-main-title;
+      line-height: px-to-rem(50);
+      margin: 0;
+      margin-left: 18%;
+      max-width: px-to-rem(734);
+      padding-bottom: 15%;
+    }
+  }
+}
