@@ -1,7 +1,7 @@
 {% if not args %}
 	{% set args = {
         title: "Too much copy supplied ",
-        description-title: "Needs to be 2 lines max",
+        descriptionTitle: "Needs to be 2 lines max",
         image: {
             src: "./../../images/cream.jpg",
         }
@@ -14,8 +14,8 @@
 			<h3 class="s-cream__title">{{ args.title }}</h3>
 		{% endif %}
 
-        {% if args.description-title %}
-			<p class="s-cream__description-title">{{ args.description-title }}</p>
+        {% if args.descriptionTitle %}
+			<p class="s-cream__description-title">{{ args.descriptionTitle }}</p>
 		{% endif %}
 		
 		{% if args.image.src %}
