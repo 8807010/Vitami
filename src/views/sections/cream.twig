@@ -1,10 +1,20 @@
 {% if not args %}
 	{% set args = {
-        title: "Too much copy supplied ",
+        titleTop: "Too much copy supplied",
         descriptionTitle: "Needs to be 2 lines max",
+        background: {
+            src: "./../../images/cream-background.png",
+        },
         image: {
-            src: "./../../images/cream.jpg",
-        }
+            src: "./../../images/cream-skin.png",
+        },
+        titleBottom: "Skin glow",
+        price: "£12.00",
+        description: "Natural blend of vitamins and minerals, specifically designed to improve the innate firmness and health of your skin.",
+        button: {
+                name: "View details",
+                href: "#"
+            },
     } %}
 {% endif %}
 
@@ -16,6 +26,12 @@
 
         {% if args.descriptionTitle %}
 			<p class="s-cream__description-title">{{ args.descriptionTitle }}</p>
+		{% endif %}
+
+        {% if args.background.src %}
+			<div class="s-cream__background">
+				<img class="s-cream__img" src="{{ args.background.src }}" alt="">
+			</div>
 		{% endif %}
 		
 		{% if args.image.src %}
