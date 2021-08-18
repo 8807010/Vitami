@@ -1,0 +1,27 @@
+{% if not args %}
+	{% set args = {
+        title: "Too much copy supplied ",
+        description-title: "Needs to be 2 lines max",
+        image: {
+            src: "./../../images/cream.jpg",
+        }
+    } %}
+{% endif %}
+
+<section class="s-cream">
+	<div class="s-cream__container">
+		{% if args.title %}
+			<h3 class="s-cream__title">{{ args.title }}</h3>
+		{% endif %}
+
+        {% if args.description-title %}
+			<p class="s-cream__description-title">{{ args.description-title }}</p>
+		{% endif %}
+		
+		{% if args.image.src %}
+			<div class="s-cream__background">
+				<img class="s-cream__img" src="{{ args.image.src }}" alt="">
+			</div>
+		{% endif %}
+	</div>
+</section>
