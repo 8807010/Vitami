@@ -7,16 +7,11 @@
     } %}
 {% endif %}
 
-<section class="s-hero">
-	<div>
+<section class="s-hero" style="background-image: url({{ args.logo.src }})">
 		{% if args.description %}
 			<div class="s-hero__description">{{ args.description }}</div>
 		{% endif %}
 		
-		{% if args.logo.src %}
-			<div class="s-hero__background">
-				<img class="s-hero__img" src="{{ args.logo.src }}" alt="">
-			</div>
-		{% endif %}
+	
 	</div>
 </section>
