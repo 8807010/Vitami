@@ -1,0 +1,8 @@
+.s-cream {
+    padding-top: px-to-rem(35);
+    padding-bottom: px-to-rem(24);
+    
+    &__container  {
+        @extend .l-container;
+    }
+}
