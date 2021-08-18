@@ -7,8 +7,8 @@
     
     &-link {
       text-decoration: none;
-      font-family: Helvetica Neue LT Std;
-      font-size: px-to-rem(20);
+      font-family: HelveticaNeueLTStd-Lt;
+      font-size: $fs-menu;
       line-height: px-to-rem(24);
     }
   }
@@ -52,11 +52,12 @@
       justify-content: center;
       position: absolute;
       top: 0;
-      right: -7px;
+      right: px-to-rem(-7);
     }
   }
 
   @include media-breakpoint-up(lg) {
+    padding-top: 0;
     &__logo {
       display: flex;
       flex-wrap: wrap;
@@ -65,6 +66,7 @@
 
     &__wrap {
       align-items: center;
+      padding-top: px-to-rem(30);
     }
 
     &__nav {
@@ -91,6 +93,9 @@
 
     &__basket {
       &-desc {
+        font-family: HelveticaNeueLTStd-Lt;
+        font-size: $fs-menu;
+        line-height: px-to-rem(24);
         display: flex;
         color: $c-main;
         margin-right: px-to-rem(11);

@@ -9,12 +9,12 @@
   justify-content: flex-end;
   background-position: 64% 58%;
   align-items: center;
-  margin-top: -46px;
+  margin-top: px-to-rem(-46);
   z-index: -1;
 
   &__description {
     color: $c-main;
-    font-family: Arial;
+    font-family: ArialBold;
     font-size: $fs-reviews;
     line-height: px-to-rem(33);
     text-align: center;
@@ -26,7 +26,6 @@
   }
 
   @include media-breakpoint-up(md) {
-    // min-height: px-to-rem(550);
     justify-content: center;
     justify-content: flex-start;
 
@@ -36,11 +35,14 @@
 }
 
   @include media-breakpoint-up(lg) {
+    margin-top: px-to-rem(-68);
     min-height: px-to-rem(775);
     background-position: 50% 0;
     flex-direction: row;
 
     &__description {
+      font-size: $fs-main-title;
+      line-height: px-to-rem(50);
       width: 100%;
       text-align: left;
       font-size: $fs-main-title;
