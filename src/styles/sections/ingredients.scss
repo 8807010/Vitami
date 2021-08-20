@@ -1,0 +1,10 @@
+.s-ingredient {
+    padding-top: px-to-rem(37);
+    padding-bottom: px-to-rem(31);
+    background-color: $c-backgraund;
+
+    &__container  {
+        @extend .l-container;
+    }
+}
+
