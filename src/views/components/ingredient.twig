@@ -1,17 +1,21 @@
 <article class="c-ingredient">
+	<div class="c-ingredient__inner">
+		<div class="c-ingredient__wrap">
+			{% if item.title %}
+				<h3 class="c-ingredient__title">{{ item.title }}</h3>
+			{% endif %}
 
-	{% if item.title %}
-		<h3 class="c-ingredient__title">{{ item.title }}</h3>
-	{% endif %}
-
-	{% if item.text %}
-		<p class="c-ingredient__text">{{ item.text }}</p>
-	{% endif %}
-
-	{% if item.img.src %}
-		<div class="c-ingredient__picture">
-			<img class="c-card__img" src="{{ item.img.src }}" alt="">
+			{% if item.text %}
+				<div class="c-ingredient__text">{{ item.text }}</div>
+			{% endif %}
 		</div>
-	{% endif %}
+
+		{% if item.img.src %}
+			<div class="c-ingredient__picture">
+				<img class="c-ingredient__img" src="{{ item.img.src }}" alt="">
+			</div>
+		{% endif %}
+	</div>
+
 
 </article>

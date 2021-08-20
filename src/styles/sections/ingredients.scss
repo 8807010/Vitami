@@ -1,10 +1,62 @@
 .s-ingredient {
-    padding-top: px-to-rem(37);
+    padding-top: px-to-rem(30);
     padding-bottom: px-to-rem(31);
     background-color: $c-backgraund;
 
-    &__container  {
-        @extend .l-container;
+    &__name {
+        text-align: center;
+        margin-bottom: px-to-rem(35);
+    }
+
+    &__title {
+        font-family: Arial;
+        font-size: $fs-text;
+        line-height: px-to-rem(24);
+        color: $c-reverse;
+        margin-bottom: px-to-rem(8);
+    }
+
+    &__description-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-base;
+        line-height: px-to-rem(19);
+        color: $c-text;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding-bottom: px-to-rem(35);
+    }
+
+    &__list {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    &__btn {
+        background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
+        border-radius: px-to-rem(24);
+        padding: px-to-rem(20) px-to-rem(70) px-to-rem(11) px-to-rem(70);
+        margin: 0;
+        border-radius: px-to-rem(24);
+    }
+
+    &__more {
+        text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: px-to-rem(69);
+        padding-bottom: px-to-rem(45);
+
+        &__title {
+            font-size: $fs-title;
+            line-height: px-to-rem(24);
+        }
+
+        &__item {
+            margin: 0 20%;
+            margin-bottom: px-to-rem(80);
+        }
     }
 }
-

@@ -25,6 +25,7 @@
 
 
 // components
+@import "components/ingredient.scss";
 
 // header / footer / modals and other: ?
 @import "areas/header";
@@ -36,7 +37,6 @@
 
 // templates
 @import "templates/base";
-
 
 // bootstrap helpers
 @import "utilities/utilities";
