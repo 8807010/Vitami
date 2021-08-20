@@ -1,8 +1,134 @@
 .s-cream {
     padding-top: px-to-rem(35);
     padding-bottom: px-to-rem(24);
-    
-    &__container  {
+
+    &__container {
         @extend .l-container;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: px-to-rem(36);
+
+        &-first {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: $fs-text;
+            line-height: px-to-rem(24);
+            color: $c-reverse;
+            margin-bottom: px-to-rem(6);
+        }
+
+        &-second {
+            font-family: Helvetica Neue LT Std;
+            font-size: $fs-text;
+            line-height: px-to-rem(26);
+            color: $c-reverse;
+        }
+
+        &-description {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: $fs-base;
+            line-height: px-to-rem(19);
+            color: $c-reverse;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: px-to-rem(600);
+        margin-bottom: px-to-rem(98);
+    }
+
+    &__product-img {
+        transform: translateY(14%);
+    }
+
+    &__informacion {
+        padding-left: px-to-rem(38);
+    }
+
+    &__price {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-base;
+        line-height: px-to-rem(24);
+        color: $c-reverse;
+        margin-bottom: px-to-rem(20);
+    }
+
+    &__description {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-base;
+        line-height: px-to-rem(24);
+        color: $c-reverse;
+        max-width: px-to-rem(600);
+        margin-bottom: px-to-rem(20);
+    }
+
+    &__btn {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-button;
+        line-height: px-to-rem(16);
+        text-transform: uppercase;
+        color: $c-main;
+        padding: px-to-rem(16) px-to-rem(80) px-to-rem(16) px-to-rem(80);
+        text-decoration: none;
+        background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
+        border-radius: px-to-rem(24);
+        margin: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        &__informacion {
+            padding-left: px-to-rem(160);
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: px-to-rem(66);
+        padding-bottom: px-to-rem(77);
+
+        &__description {
+            margin-bottom: 0;
+        }
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title-second {
+            margin-bottom: px-to-rem(6);
+        }
+
+        &__informacion {
+            padding-left: 0;
+            padding-top: px-to-rem(57);
+
+            &-wrap {
+                margin-bottom: px-to-rem(94);
+            }
+        }
+
+        &__price {
+            margin-bottom: px-to-rem(15);
+        }
+
+        &__img {
+            display: flex;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: px-to-rem(600);
+            margin-bottom: 0;
+        }
     }
 }
