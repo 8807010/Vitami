@@ -1,0 +1,37 @@
+<article class="c-review">
+
+	{% if args.title %}
+		<h3 class="c-review__title">{{ args.title }}</h3>
+	{% endif %}
+
+	{% if args.name %}
+		<p class="c-review__name">{{ args.name }}</p>
+	{% endif %}
+
+	{# {% if args.list|length %}
+			<ul class="c-review__list">
+				{% for item in args.list %}
+					<li class="c-review__item">
+						{% include "elements/icon.twig" with { name: "ic-star", modifier: "c-review__icon" } %}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %} #}
+
+	{% if args.list|length %}
+		<ul class="c-review__list">
+			{% for item in args.list %}
+				<li class="c-review__item">
+					<div class="c-review__picture">
+						<img class="c-review__img" src="{{ item.img.src }}" alt="">
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{% if args.description %}
+		<div class="c-review__job">{{ args.description }}</div>
+	{% endif %}
+
+</article>
