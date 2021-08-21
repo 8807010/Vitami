@@ -1,0 +1,28 @@
+.s-discount {
+    padding: 0 px-to-rem(50);
+    padding-top: px-to-rem(46);
+    padding-bottom: px-to-rem(30);
+    background-color: $c-backgraund;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-width: px-to-rem(1150);
+        margin: 0 auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: px-to-rem(146);
+        padding-bottom: px-to-rem(123);
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<article class="c-discount">
+	{% if img.src %}
+		<div class="c-discount__picture">
+			<img class="c-discount__img" src="{{ img.src }}" alt="">
+		</div>
+	{% endif %}
+
+	{% if title %}
+		<h3 class="c-discount__title">{{ title }}</h3>
+	{% endif %}
+
+	{% if description %}
+		<div class="c-discount__description">{{ description }}</div>
+	{% endif %}
+</article>

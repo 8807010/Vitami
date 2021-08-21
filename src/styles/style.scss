@@ -25,6 +25,7 @@
 
 
 // components
+@import "components/discount.scss";
 
 // header / footer / modals and other: ?
 @import "areas/header";
@@ -32,6 +33,8 @@
 // sections
 @import "sections/cream.scss";
 @import "sections/hero";
+@import "sections/discounts.scss";
+
 
 // templates
 @import "templates/base";
