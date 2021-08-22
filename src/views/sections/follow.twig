@@ -1,0 +1,54 @@
+{% if not args %}
+	{% set args = {
+        title: "Follow us on instagram",
+        subtitle: "Show us your result #vitami",
+        list: [
+        {
+            img: {
+                src: "./../../images/instagram1.jpg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/instagram2.jpg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/instagram3.jpg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/instagram4.jpg",
+            },
+        },
+]
+} %}
+{% endif %}
+
+<section class="s-follow">
+	<div class="s-follow__wrap">
+		{% if args.title %}
+			<h2 class="s-follow__title">{{ args.title }}</h2>
+		{% endif %}
+
+		{% if args.subtitle %}
+			<div class="s-follow__subtitle">{{ args.subtitle }}</div>
+		{% endif %}
+	</div>
+
+	{% if args.list|length %}
+		<ul class="s-follow__list">
+			<div class="s-follow__inner">
+				{% for item in args.list %}
+					<li class="s-follow__item">
+						<div class="s-follow__picture">
+							<img class="s-follow__img" src="{{ item.img.src }}" alt="">
+						</div>
+					</li>
+				{% endfor %}
+			</div>
+		</ul>
+	{% endif %}
+</section>
