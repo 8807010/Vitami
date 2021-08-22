@@ -1,0 +1,59 @@
+.c-sleep {
+    padding-top: px-to-rem(133);
+    padding-bottom: px-to-rem(124);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    height: 100%;
+    min-width: px-to-rem(279);
+    cursor: pointer;
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__wrap {
+        text-align: center;
+        margin: 0 auto;
+        max-width: px-to-rem(183);
+        width: 100%;
+    }
+
+    &__title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-menu;
+        line-height: px-to-rem(24);
+        color: $c-main;
+        margin-bottom: px-to-rem(15);
+    }
+
+    &__text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-base;
+        line-height: px-to-rem(19);
+        color: $c-main;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: px-to-rem(315);
+        padding-bottom: px-to-rem(249);
+        min-width: px-to-rem(706);
+        min-height: px-to-rem(706);
+
+        &__title {
+            margin-bottom: px-to-rem(39);
+            font-size: $fs-title;
+            line-height: px-to-rem(38);
+        }
+
+        &__text {
+            font-size: $fs-text;
+            line-height: px-to-rem(26);
+        }
+
+        &__wrap {
+            max-width: px-to-rem(311);
+        }
+    }
+}

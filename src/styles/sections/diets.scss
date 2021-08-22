@@ -1,0 +1,24 @@
+.s-diets {
+    &__container {
+        @extend .l-container;
+    }
+
+    &__item {
+        list-style-type: none;
+        margin-top: px-to-rem(20);
+        margin-right: px-to-rem(20);
+        margin-bottom: px-to-rem(20);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &__item {
+            margin-right: px-to-rem(76);
+        }
+    }
+}

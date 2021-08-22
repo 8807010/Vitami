@@ -25,6 +25,9 @@
 
 
 // components
+@import "components/diet.scss";
+
+
 
 // header / footer / modals and other: ?
 @import "areas/header";
@@ -32,6 +35,8 @@
 // sections
 @import "sections/cream.scss";
 @import "sections/hero";
+@import "sections/journal.scss";
+@import "sections/diets.scss";
 
 // templates
 @import "templates/base";
