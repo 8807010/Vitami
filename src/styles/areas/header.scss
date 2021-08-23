@@ -4,7 +4,11 @@
 
   &__nav {
     display: none;
-    
+
+    &-menu {
+      display: none;
+    }
+
     &-link {
       text-decoration: none;
       font-family: HelveticaNeueLTStd-Lt;
@@ -24,6 +28,14 @@
 
   &__burger {
     padding-bottom: px-to-rem(4);
+
+    &-menu {
+      width: px-to-rem(22);
+    }
+
+    &-close {
+      display: none;
+    }
   }
 
   &__logo {
@@ -58,6 +70,7 @@
 
   @include media-breakpoint-up(lg) {
     padding-top: 0;
+
     &__logo {
       display: flex;
       flex-wrap: wrap;
@@ -105,5 +118,44 @@
         display: flex;
       }
     }
+  }
+}
+
+
+
+
+
+
+
+.is-open {
+  position: absolute;
+  height: 100vh;
+  background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
+  width: 100%;
+
+  .header__burger-menu {
+    display: none;
+  }
+
+  .header__burger-close {
+    display: block;
+  }
+
+  .header__nav-menu {
+    display: flex;
+    padding-top: px-to-rem(163);
+    padding-left: 30%;
+  }
+
+  .header__nav-list {
+    list-style-type: none;
+    padding-bottom: px-to-rem(33);
+  }
+
+  .header__nav-link {
+    font-family: ArialBold;
+    font-size: $fs-subtitle;
+    line-height: px-to-rem(28);
+    color: $c-main;
   }
 }

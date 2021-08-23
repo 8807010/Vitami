@@ -30,7 +30,7 @@
 {% endif %}
 
 
-<header class="header">
+<header class="header is-open">
 	<div class="header__wrap">
 		<div class="header__inner">
 			<nav class="header__nav">
@@ -46,8 +46,9 @@
 					</ul>
 				{% endif %}
 			</nav>
-			<div class="header__burger">
-				<img class="header__burger-img" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
+			<div class="header__burger js-header__menu">
+				<img class="header__burger-menu" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
+				<img class="header__burger-close" src="./../../images/svg_sprite_inline/ic-end.svg" alt="">
 			</div>
 		</div>
 
@@ -72,5 +73,22 @@
 			{% endif %}
 		</div>
 	</div>
-</header>
 
+	<nav class="header__nav-menu">
+		{% if args.list|length %}
+			<ul class="header__nav-item">
+				{% for item in args.list %}
+					<li class="header__nav-list">
+						{% if item.href and item.name %}
+							<a class="header__nav-link" href="{{ item.href }}">{{ item.name }}</a>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</nav>
+
+	<div class="header__socials">
+	
+	</div>
+</header>
