@@ -25,7 +25,21 @@
         btn: {
             name: "Basket ",
             src: "./../../images/svg_sprite_inline/ic-basket.svg",
-        }
+        },
+		socials: [
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-facebook.svg",
+            },
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-instagram.svg",
+            },
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-twitter.svg",
+            },
+        ],
     } %}
 {% endif %}
 
@@ -74,21 +88,35 @@
 		</div>
 	</div>
 
-	<nav class="header__nav-menu">
-		{% if args.list|length %}
-			<ul class="header__nav-item">
-				{% for item in args.list %}
-					<li class="header__nav-list">
-						{% if item.href and item.name %}
-							<a class="header__nav-link" href="{{ item.href }}">{{ item.name }}</a>
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-	</nav>
-
-	<div class="header__socials">
-	
+	<div class="header__menu-wrap">
+		<nav class="header__nav-menu">
+			{% if args.list|length %}
+				<ul class="header__nav-item">
+					{% for item in args.list %}
+						<li class="header__nav-list">
+							{% if item.href and item.name %}
+								<a class="header__nav-link" href="{{ item.href }}">{{ item.name }}</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</nav>
+		
+		<div class="header__socials">
+			{% if args.socials|length %}
+				<ul class="header__socials-item">
+					{% for item in args.socials %}
+						<li class="header__socials-list">
+							{% if item.href and item.src %}
+								<a class="header__socials-link" href="{{ item.href }}">
+									<img class="header__socials-img" src="{{ item.src }}" alt="">
+								</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
 	</div>
 </header>
