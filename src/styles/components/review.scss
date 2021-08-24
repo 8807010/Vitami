@@ -1,0 +1,35 @@
+.c-review {
+    text-align: center;
+    padding: 0 px-to-rem(50);
+    min-width: px-to-rem(350);
+    width: 100%;
+    margin: 0 auto;
+    max-width: px-to-rem(705);
+
+    &__title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-text;
+        line-height: px-to-rem(25);
+        color: $c-reverse;
+        margin-bottom: px-to-rem(23);
+    }
+
+    &__name {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $fs-base;
+        line-height: px-to-rem(19);
+        color: $c-reverse;
+        margin-bottom: px-to-rem(11);
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: px-to-rem(12);
+    }
+
+    &__item {
+        list-style-type: none;
+    }
+}

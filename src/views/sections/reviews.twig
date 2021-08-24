@@ -1,0 +1,40 @@
+{% if not args %}
+	{% set args = {
+        title: "People have said",
+        name: "Customer name",
+        list: [
+        {
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-star.svg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-star.svg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-star.svg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-star.svg",
+            },
+        },
+        {
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-star.svg",
+            },
+        },
+        ],
+        description: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae lacus magna. “",
+} %}
+{% endif %}
+
+<section class="s-reviews">
+	{% include "components/review.twig" %}
+	{% include "components/review.twig" %}
+	{% include "components/review.twig" %}
+</section>

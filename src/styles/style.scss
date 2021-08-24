@@ -26,6 +26,8 @@
 
 // components
 @import "components/ingredient.scss";
+@import "components/review.scss";
+
 
 // header / footer / modals and other: ?
 @import "areas/header";
@@ -35,6 +37,7 @@
 @import "sections/hero";
 @import "sections/ingredients.scss";
 
+@import "sections/rewiews.scss";
 
 // templates
 @import "templates/base";
