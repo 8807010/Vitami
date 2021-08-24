@@ -1,27 +1,63 @@
 {% if not args %}
 	{% set args = {
-        title: "Too much copy supplied ",
-        description-title: "Needs to be 2 lines max",
+        titleFirst: "Too much copy supplied",
+        descriptionTitle: "Needs to be 2 lines max",
+        background: {
+            src: "./../../images/cream-background.png",
+        },
         image: {
-            src: "./../../images/cream.jpg",
-        }
+            src: "./../../images/cream-skin.png",
+        },
+        titleSecond: "Skin glow",
+        price: "£12.00",
+        description: "Natural blend of vitamins and minerals, specifically designed to improve the innate firmness and health of your skin.",
+        button: {
+                name: "View details",
+                href: "#"
+            }
     } %}
 {% endif %}
 
 <section class="s-cream">
 	<div class="s-cream__container">
-		{% if args.title %}
-			<h3 class="s-cream__title">{{ args.title }}</h3>
-		{% endif %}
+		<div class="s-cream__title">
+			{% if args.titleFirst %}
+				<h3 class="s-cream__title-first">{{ args.titleFirst }}</h3>
+			{% endif %}
 
-        {% if args.description-title %}
-			<p class="s-cream__description-title">{{ args.description-title }}</p>
-		{% endif %}
-		
-		{% if args.image.src %}
-			<div class="s-cream__background">
-				<img class="s-cream__img" src="{{ args.image.src }}" alt="">
+			{% if args.descriptionTitle %}
+				<p class="s-cream__title-description">{{ args.descriptionTitle }}</p>
+			{% endif %}
+		</div>
+
+		<div class="s-cream__inner">
+			<div class="s-cream__img" style="background-image: url({{ args.background.src }})">
+				{% if args.image.src %}
+					<div class="s-cream__product">
+						<img class="s-cream__product-img" src="{{ args.image.src }}" alt="">
+					</div>
+				{% endif %}
 			</div>
-		{% endif %}
+
+			<div class="s-cream__informacion">
+				<div class="s-cream__informacion-wrap">
+					{% if args.titleSecond %}
+						<h3 class="s-cream__title-second">{{ args.titleSecond }}</h3>
+					{% endif %}
+
+					{% if args.price %}
+						<span class="s-cream__price">{{ args.price }}</span>
+					{% endif %}
+
+					{% if args.description %}
+						<p class="s-cream__description">{{ args.description }}</p>
+					{% endif %}
+				</div>
+
+				{% if args.button.name and args.button.href %}
+					<a class="s-cream__btn btn" href="{{ args.button.href }}">{{ args.button.name }}</a>
+				{% endif %}
+			</div>
+		</div>
 	</div>
 </section>
