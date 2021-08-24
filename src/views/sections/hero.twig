@@ -8,10 +8,7 @@
 {% endif %}
 
 <section class="s-hero" style="background-image: url({{ args.logo.src }})">
-		{% if args.description %}
-			<div class="s-hero__description">{{ args.description }}</div>
-		{% endif %}
-		
-	
-	</div>
+	{% if args.description %}
+		<div class="s-hero__description">{{ args.description }}</div>
+	{% endif %}
 </section>
