@@ -8,16 +8,6 @@
 		<p class="c-review__name">{{ args.name }}</p>
 	{% endif %}
 
-	{# {% if args.list|length %}
-			<ul class="c-review__list">
-				{% for item in args.list %}
-					<li class="c-review__item">
-						{% include "elements/icon.twig" with { name: "ic-star", modifier: "c-review__icon" } %}
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %} #}
-
 	{% if args.list|length %}
 		<ul class="c-review__list">
 			{% for item in args.list %}
@@ -33,5 +23,5 @@
 	{% if args.description %}
 		<div class="c-review__job">{{ args.description }}</div>
 	{% endif %}
-
+	
 </article>
