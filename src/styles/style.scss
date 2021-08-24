@@ -28,6 +28,7 @@
 @import "components/ingredient.scss";
 @import "components/review.scss";
 
+@import "components/discount.scss";
 
 // header / footer / modals and other: ?
 @import "areas/header";
@@ -38,6 +39,8 @@
 @import "sections/ingredients.scss";
 
 @import "sections/rewiews.scss";
+@import "sections/discounts.scss";
+
 
 // templates
 @import "templates/base";

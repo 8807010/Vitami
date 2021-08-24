@@ -1,0 +1,41 @@
+.s-discount {
+    padding-top: px-to-rem(46);
+    padding-bottom: px-to-rem(30);
+    background-color: $c-backgraund;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-width: px-to-rem(1150);
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        max-width: px-to-rem(272);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: px-to-rem(146);
+        padding-bottom: px-to-rem(123);
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__item {
+            margin-right: px-to-rem(50);
+            max-width: px-to-rem(312);
+        }
+
+        &__item:last-child {
+            margin-right: 0;
+        }
+    }
+}

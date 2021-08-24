@@ -1,0 +1,40 @@
+{% if not args %}
+	{% set args = {
+        list: [
+        { 
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-box.svg",
+            },
+            title: "Free UK Shipping",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim elit non lacus egestas maximus.",
+        },
+        { 
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-percent.svg",
+            },
+            title: "Monthly discount codes",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim elit non lacus egestas maximus.",
+        },
+        {
+            img: {
+                src: "./../../images/svg_sprite_inline/ic-cancel.svg",
+            },
+            title: "Subscription",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim elit non lacus egestas maximus.",
+            
+        },
+        ]
+} %}
+{% endif %}
+
+<section class="s-discount">
+	{% if args.list|length %}
+		<ul class="s-discount__list">
+			{% for item in args.list %}
+				<li class="s-discount__item">
+					{% include "components/discount.twig" with item %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</section>
