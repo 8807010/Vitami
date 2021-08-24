@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: px-to-rem(272);
+    width: 100%;
 
     &__picture {
         height: px-to-rem(89);
@@ -32,5 +34,10 @@
         color: $c-reverse;
         margin-bottom: px-to-rem(11);
         text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-width: px-to-rem(312);
+        width: 100%;
     }
 }
