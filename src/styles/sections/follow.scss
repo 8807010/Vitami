@@ -22,9 +22,14 @@
         margin-bottom: px-to-rem(36);
     }
 
-    &__inner {
+    &__list {
         display: flex;
         overflow-x: scroll;
+    }
+
+    &__picture {
+        max-width: px-to-rem(318);
+        max-height: px-to-rem(318);
     }
 
     &__img {

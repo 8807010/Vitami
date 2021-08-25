@@ -34,21 +34,19 @@
 		{% endif %}
 
 		{% if args.subtitle %}
-			<div class="s-follow__subtitle">{{ args.subtitle }}</div>
+			<p class="s-follow__subtitle">{{ args.subtitle }}</p>
 		{% endif %}
 	</div>
 
 	{% if args.list|length %}
 		<ul class="s-follow__list">
-			<div class="s-follow__inner">
-				{% for item in args.list %}
-					<li class="s-follow__item">
-						<div class="s-follow__picture">
-							<img class="s-follow__img" src="{{ item.img.src }}" alt="">
-						</div>
-					</li>
-				{% endfor %}
-			</div>
+			{% for item in args.list %}
+				<li class="s-follow__item">
+					<div class="s-follow__picture">
+						<img class="s-follow__img" src="{{ item.img.src }}" alt="">
+					</div>
+				</li>
+			{% endfor %}
 		</ul>
 	{% endif %}
 </section>
