@@ -1,0 +1,130 @@
+{% if not args %}
+	{% set args = {
+        logo: {
+            src: "./../../images/svg_sprite_inline/ic-footerLogo.svg",
+        },
+        socials: [
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-facebook.svg",
+            },
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-instagram.svg",
+            },
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-twitter.svg",
+            },
+        ],
+        input: "Your email",
+        btn: "join",
+        description: "Join our mailing list to stay up to date with the vitami news and offers.",
+        menu: [
+            {
+                href: "#",
+                name: "Shop",
+            },
+            {
+                href: "#",
+                name: "FAQs",
+            },
+            {
+                href: "#",
+                name: "Blog",
+            },
+            {
+                href: "#",
+                name: "Contact",
+            },
+        ],
+        policy: [
+            {
+                href: "#",
+                name: "Terms & Conditions",
+            },
+            {
+                href: "#",
+                name: "Privacy Policy",
+            },
+            {
+                href: "#",
+                name: "Cookie Policy",
+            },
+        ]
+    } %}
+{% endif %}
+
+<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__logo">
+			<a class="footer__logo-link" href="/">
+				{% if args.logo.src %}
+					<img class="footer__logo-img" src="{{ args.logo.src }}">
+				{% endif %}
+			</a>
+		</div>
+
+		<div class="footer__socials">
+			{% if args.socials|length %}
+				<ul class="footer__socials-item">
+					{% for item in args.socials %}
+						<li class="footer__socials-list">
+							{% if item.href and item.src %}
+								<a class="footer__socials-link" href="{{ item.href }}">
+									<img class="footer__socials-img" src="{{ item.src }}" alt="">
+								</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+
+		<div class="footer__subscribe">
+			<form class="footer__subscribe-form">
+				<label class="footer__subscribe-label">
+					{% if args.input %}
+						<input class="footer__subscribe-input" type="text" name="" id="" placeholder="{{ args.input }}">
+					{% endif %}
+
+					{% if args.btn %}
+						<button type="submit" class="footer__subscribe-btn btn" href="#">{{ args.btn }}</button>
+					{% endif %}
+				</label>
+			</form>
+		</div>
+
+		{% if args.description %}
+			<p class="footer__description">{{ args.description }}</p>
+		{% endif %}
+
+		<nav class="footer__nav">
+			{% if args.menu|length %}
+				<ul class="footer__nav-item">
+					{% for item in args.menu %}
+						<li class="footer__nav-list">
+							{% if item.href and item.name %}
+								<a class="footer__nav-link" href="{{ item.href }}">{{ item.name }}</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</nav>
+
+		<div class="footer__policy">
+			{% if args.policy|length %}
+				<ul class="footer__policy-item">
+					{% for item in args.policy %}
+						<li class="footer__policy-list">
+							{% if item.href and item.name %}
+								<a class="footer__policy-link" href="{{ item.href }}">{{ item.name }}</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+</footer>
