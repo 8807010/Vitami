@@ -3,7 +3,6 @@
     padding-bottom: px-to-rem(33);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
     background-size: cover;
     max-height: px-to-rem(472);
     height: 100%;
@@ -30,7 +29,7 @@
         color: $c-main;
         border-radius: px-to-rem(24);
         background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
-        padding: px-to-rem(19) px-to-rem(73) px-to-rem(12) px-to-rem(71);
+        padding: px-to-rem(12) px-to-rem(73) px-to-rem(12) px-to-rem(71);
     }
 
     @include media-breakpoint-up(md) {
@@ -42,7 +41,7 @@
             color: $c-main;
             font-size: $fs-title;
             max-width: px-to-rem(350);
-
+            line-height: px-to-rem(39);
         }
     }
 }
