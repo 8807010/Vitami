@@ -1,0 +1,36 @@
+{% if not args %}
+	{% set args = {
+list: [
+    {
+        button: {
+            title: "Should you switch to alkaline diet?",
+            href: "#",
+            text: "View post",
+            img: "./../../images/fructs.jpg",
+        }, 
+    },
+    {
+        button: {
+            title: "The importance of sleep",
+            href: "#",
+            text: "View post",
+            img: "./../../images/legs.jpg",
+    },
+    },
+]
+} %}
+{% endif %}
+
+<section class="s-diets">
+	<div class="s-diets__container">
+		{% if args.list|length %}
+			<ul class="s-diets__list">
+				{% for item in args.list %}
+					<li class="s-diets__item">
+						{% include "components/diet.twig" with item %}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
+</section>
