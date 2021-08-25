@@ -1,0 +1,22 @@
+{% if not args %}
+	{% set args = {
+        title: "Our health journal",
+        button: {
+            name: "Go to journal",
+            href: "#"
+        },
+        image: "./../../images/journal.jpg"
+} %}
+{% endif %}
+
+<section class="s-journal" style="background-image:url({{args.image}})">
+	{% if args.title %}
+		<h3 class="s-journal__title">{{ args.title }}</h3>
+	{% endif %}
+
+	<div class="s-journal__button">
+		{% if args.button.href and args.button.name %}
+			<a class="s-journal__btn btn" href="{{ args.button.href }}">{{ args.button.name }}</a>
+		{% endif %}
+	</div>
+</section>
