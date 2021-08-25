@@ -1,7 +1,7 @@
 .footer {
-    padding-top: px-to-rem(20);
     padding-bottom: px-to-rem(50);
     text-align: center;
+    background: $c-main;
 
     &__container {
         @extend .l-container;
@@ -78,8 +78,8 @@
             padding-left: px-to-rem(22);
             background-color: $c-backgraund;
             border: none;
-            outline-color: $c-gray;
-            border-radius: px-to-rem(8);
+            outline-color: $c-brandStart;
+            border-radius: px-to-rem(4) 0 0 px-to-rem(4);
             padding-right: px-to-rem(10);
             max-width: px-to-rem(250);
             width: 100%;
@@ -95,8 +95,8 @@
             width: 100%;
             min-width: px-to-rem(92);
             margin: 0;
-            margin-left: px-to-rem(-6);
             background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
+            border-radius: 0 px-to-rem(4) px-to-rem(4) 0;
         }
     }
 
@@ -165,11 +165,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-        padding-top: px-to-rem(141);
         padding-bottom: px-to-rem(43);
-        max-width: px-to-rem(488);
-        width: 100%;
-        margin: 0 auto;
 
         &__logo {
             margin-bottom: px-to-rem(30);

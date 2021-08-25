@@ -1,6 +1,8 @@
 .s-follow {
     padding-top: px-to-rem(45);
     padding-bottom: px-to-rem(67);
+    background-color: $c-main;
+    width: 100%;
 
     &__wrap {
         text-align: center;
