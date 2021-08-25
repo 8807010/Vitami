@@ -27,7 +27,6 @@
 // components
 @import "components/ingredient.scss";
 @import "components/review.scss";
-
 @import "components/discount.scss";
 @import "components/diet.scss";
 
@@ -38,12 +37,11 @@
 @import "areas/footer.scss";
 
 // sections
+@import "sections/hero.scss";
 @import "sections/cream.scss";
-@import "sections/hero";
 @import "sections/ingredients.scss";
 @import "sections/rewiews.scss";
 @import "sections/discounts.scss";
-@import "sections/journal.scss";
 @import "sections/journal.scss";
 @import "sections/diets.scss";
 @import "sections/follow.scss";
