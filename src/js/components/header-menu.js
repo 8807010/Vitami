@@ -1,12 +1,16 @@
 export default function menuMobile(btn) {
-    // console.log(btn);
-
 
     btn.addEventListener('click', (event) => {
-        if (btn.classList.contains('is-open')) {
-            btn.classList.remove('is-open')
+        btn.classList.toggle('is-open')
+
+        const classes = {
+            openClass: 'is-open'
+        }
+
+        if (btn.classList.contains(classes.openClass)) {
+            btn.classList.remove(classes.openClass)
         } else {
-            btn.classList.add('is-open')
+            btn.classList.add(classes.openClass)
         }
     });
 }

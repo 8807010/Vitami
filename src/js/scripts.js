@@ -3,7 +3,6 @@ import svg4everybody from 'svg4everybody';
 import scrollLock from 'scroll-lock';
 
 import menuMobile from './components/header-menu';
-
 import Header from './components/header';
 import testServerRequest from './components/test-server-request.js';
 
@@ -45,7 +44,7 @@ window.app = {
 
     app.initModule(testServerRequest, '.js-test-api');
 
-    app.initModule(menuMobile, '.js-header__menu');
+    app.initModule(menuMobile, '.js-header-menu');
   }
 
 };

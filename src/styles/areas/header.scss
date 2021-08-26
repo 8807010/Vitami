@@ -26,13 +26,6 @@
     padding-bottom: px-to-rem(4);
     cursor: pointer;
 
-    .is-open {
-      .header-modal {
-        transform: translateX(0);
-        transition: all 0.3s ease;
-      }
-    }
-
     &-menu {
       width: px-to-rem(22);
     }
@@ -121,13 +114,6 @@
   }
 }
 
-// .is-open {
-//   .header-modal {
-//     transform: translateX(0);
-//     transition: all 0.3s ease;
-//   }
-// }
-
 .header-modal {
   padding: 0 px-to-rem(26);
   padding-top: px-to-rem(16);
@@ -139,6 +125,11 @@
   background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
   transform: translateX(-1000%);
   z-index: 5;
+
+  &.is-open {
+    transform: translateX(0);
+    transition: all .3s ease;
+  }
 
   &__wrap {
     max-width: px-to-rem(1736);
@@ -154,6 +145,7 @@
 
     &-close {
       width: px-to-rem(13);
+      cursor: pointer;
     }
   }
 
