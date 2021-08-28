@@ -2,8 +2,9 @@
 import svg4everybody from 'svg4everybody';
 import scrollLock from 'scroll-lock';
 
-import Header from './components/header'
-import testServerRequest from './components/test-server-request.js'
+import menuMobile from './components/header-menu';
+import Header from './components/header';
+import testServerRequest from './components/test-server-request.js';
 
 svg4everybody();
 
@@ -42,6 +43,8 @@ window.app = {
     window.app.header = new Header('.js-header');
 
     app.initModule(testServerRequest, '.js-test-api');
+
+    app.initModule(menuMobile, '.js-header-menu');
   }
 
 };

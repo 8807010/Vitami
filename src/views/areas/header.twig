@@ -25,7 +25,21 @@
         btn: {
             name: "Basket ",
             src: "./../../images/svg_sprite_inline/ic-basket.svg",
-        }
+        },
+		socials: [
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-facebook.svg",
+            },
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-instagram.svg",
+            },
+            {
+                href: "#",
+                src: "./../../images/svg_sprite_inline/ic-twitter.svg",
+            },
+        ],
     } %}
 {% endif %}
 
@@ -46,9 +60,9 @@
 					</ul>
 				{% endif %}
 			</nav>
-			<div class="header__burger">
-				<img class="header__burger-img" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
-			</div>
+			<button class="header__burger js-header-menu">
+				<img class="header__burger-menu" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
+			</button>
 		</div>
 
 		<div class="header__logo">
@@ -74,3 +88,66 @@
 	</div>
 </header>
 
+
+<div class="header-modal js-header-modal">
+	<div class="header-modal__wrap">
+		<button class="header-modal__burger js-header-menu">
+			<img class="header-modal__burger-close" src="./../../images/svg_sprite_inline/ic-end.svg" alt="">
+		</button>
+
+		<div class="header-modal__logo">
+			<a class="header-modal__logo-link" href="/">
+				{% if args.logo.src %}
+					<img class="header-modal__logo-img" src="{{ args.logo.src }}">
+				{% endif %}
+			</a>
+		</div>
+
+		<div class="header-modal__basket">
+			{% if args.btn.name and args.btn.src %}
+				<button class="header-modal__basket-btn">
+					<p class="header-modal__basket-desc">
+						{{ args.btn.name }}</p>
+					<div class="header-modal__basket-wrap">
+						<img class="header-modal__basket-img" src="{{ args.btn.src }}" alt="">
+						<span class="header-modal__basket-sum">15</span>
+					</div>
+				</button>
+			{% endif %}
+		</div>
+	</div>
+
+	<div class="header-modal__inner">
+		<nav class="header-modal__nav">
+			{% if args.list|length %}
+				<ul class="header-modal__nav-item">
+					{% for item in args.list %}
+						<li class="header-modal__nav-list">
+							{% if item.href and item.name %}
+								<a class="header-modal__nav-link" href="{{ item.href }}">{{ item.name }}</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</nav>
+
+		<div class="header-modal__socials">
+			{% if args.socials|length %}
+				<ul class="header-modal__socials-item">
+					{% for item in args.socials %}
+						<li class="header-modal__socials-list">
+							{% if item.href and item.src %}
+								<a class="header-modal__socials-link" href="{{ item.href }}">
+									<div class="header-modal__socials-icon el-icon">
+										<img class="header-modal__socials-img" src="{{ item.src }}" alt="">
+									</div>
+								</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+</div>

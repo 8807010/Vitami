@@ -4,7 +4,7 @@
 
   &__nav {
     display: none;
-    
+
     &-link {
       text-decoration: none;
       font-family: HelveticaNeueLTStd-Lt;
@@ -24,6 +24,11 @@
 
   &__burger {
     padding-bottom: px-to-rem(4);
+    cursor: pointer;
+
+    &-menu {
+      width: px-to-rem(22);
+    }
   }
 
   &__logo {
@@ -58,6 +63,7 @@
 
   @include media-breakpoint-up(lg) {
     padding-top: 0;
+
     &__logo {
       display: flex;
       flex-wrap: wrap;
@@ -105,5 +111,120 @@
         display: flex;
       }
     }
+  }
+}
+
+.header-modal {
+  padding: 0 px-to-rem(26);
+  padding-top: px-to-rem(16);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
+  transform: translateX(-1000%);
+  transition: all 1s ease;
+  z-index: 5;
+
+  &.is-open {
+    transform: translateX(0);
+    transition: all 1s ease;
+  }
+
+  &__wrap {
+    max-width: px-to-rem(1736);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__burger {
+    padding-bottom: px-to-rem(4);
+
+    &-close {
+      width: px-to-rem(13);
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    width: px-to-rem(82);
+  }
+
+  &__basket {
+    &-desc {
+      display: none;
+    }
+
+    &-wrap {
+      position: relative;
+    }
+
+    &-sum {
+      font-size: px-to-rem(9);
+      line-height: px-to-rem(11);
+      width: px-to-rem(14);
+      height: px-to-rem(14);
+      color: $c-main;
+      border: px-to-rem(1) solid $c-main;
+      background: linear-gradient(130.7deg, #D369D6 7.15%, #EB0A3C 94.53%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: px-to-rem(-7);
+    }
+  }
+
+  &__nav {
+
+    &-list {
+      list-style-type: none;
+      margin-bottom: px-to-rem(30);
+    }
+
+    &-link {
+      font-family: Arial;
+      font-size: $fs-subtitle;
+      line-height: px-to-rem(28);
+      color: $c-main;
+      text-decoration: none;
+    }
+  }
+
+  &__socials {
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style-type: none;
+    }
+
+    &-list {
+      margin-right: px-to-rem(25);
+    }
+
+    &-list:last-child {
+      margin-right: 0;
+    }
+
+    &-icon {
+      color: $c-main;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
   }
 }
