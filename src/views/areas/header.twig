@@ -60,9 +60,9 @@
 					</ul>
 				{% endif %}
 			</nav>
-			<div class="header__burger js-header-menu">
+			<button class="header__burger js-header-menu">
 				<img class="header__burger-menu" src="./../../images/svg_sprite_inline/ic-burgerBtn.svg" alt="">
-			</div>
+			</button>
 		</div>
 
 		<div class="header__logo">
@@ -89,13 +89,11 @@
 </header>
 
 
-
-
-<div class="header-modal is-open">
+<div class="header-modal js-header-modal">
 	<div class="header-modal__wrap">
-		<div class="header-modal__burger">
+		<button class="header-modal__burger js-header-menu">
 			<img class="header-modal__burger-close" src="./../../images/svg_sprite_inline/ic-end.svg" alt="">
-		</div>
+		</button>
 
 		<div class="header-modal__logo">
 			<a class="header-modal__logo-link" href="/">
@@ -141,7 +139,9 @@
 						<li class="header-modal__socials-list">
 							{% if item.href and item.src %}
 								<a class="header-modal__socials-link" href="{{ item.href }}">
-									<img class="header-modal__socials-img" src="{{ item.src }}" alt="">
+									<div class="header-modal__socials-icon el-icon">
+										<img class="header-modal__socials-img" src="{{ item.src }}" alt="">
+									</div>
 								</a>
 							{% endif %}
 						</li>
@@ -150,5 +150,4 @@
 			{% endif %}
 		</div>
 	</div>
-
 </div>

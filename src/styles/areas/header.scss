@@ -124,11 +124,12 @@
   right: 0;
   background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
   transform: translateX(-1000%);
+  transition: all 1s ease;
   z-index: 5;
 
   &.is-open {
     transform: translateX(0);
-    transition: all .3s ease;
+    transition: all 1s ease;
   }
 
   &__wrap {
@@ -210,6 +211,13 @@
     &-list:last-child {
       margin-right: 0;
     }
+
+    &-icon {
+      color: $c-main;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 
   &__inner {
