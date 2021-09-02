@@ -20,6 +20,7 @@
         margin-bottom: px-to-rem(30);
         color: $c-main;
         text-align: center;
+        padding: 0 px-to-rem(20);
     }
 
     &__btn {
@@ -30,7 +31,8 @@
         color: $c-main;
         border-radius: px-to-rem(24);
         background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
-        padding: px-to-rem(12) px-to-rem(73) px-to-rem(12) px-to-rem(71);
+        padding: px-to-rem(12) px-to-rem(20) px-to-rem(12) px-to-rem(20);
+        min-width: px-to-rem(260);
     }
 
     @include media-breakpoint-up(md) {

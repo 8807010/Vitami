@@ -1,8 +1,14 @@
 .s-diets {
     background: $c-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__container {
         @extend .l-container;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__item {

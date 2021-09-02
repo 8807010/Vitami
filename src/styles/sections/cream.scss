@@ -37,18 +37,33 @@
     }
 
     &__img {
+        position: relative;
         display: flex;
         justify-content: center;
-        background-repeat: no-repeat;
-        background-position: 50% 0;
         margin: 0 auto;
         width: 100%;
         max-width: px-to-rem(600);
         margin-bottom: px-to-rem(98);
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            max-width: px-to-rem(339);
+            padding-top: px-to-rem(215);
+            border-radius: px-to-rem(12);
+            background: linear-gradient(146.81deg, #c6489a 20.71%, #91206a 91.21%);
+        }
     }
 
-    &__product-img {
-        transform: translateY(14%);
+    &__product {
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+
+        &-img {
+            transform: translateY(14%);
+        }
     }
 
     &__informacion {
@@ -78,7 +93,8 @@
         line-height: px-to-rem(16);
         text-transform: uppercase;
         color: $c-main;
-        padding: px-to-rem(16) px-to-rem(80) px-to-rem(16) px-to-rem(80);
+        padding: px-to-rem(16) px-to-rem(20) px-to-rem(16) px-to-rem(20);
+        min-width: px-to-rem(260);
         text-decoration: none;
         background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
         border-radius: px-to-rem(24);
@@ -93,7 +109,7 @@
 
     @include media-breakpoint-up(xl) {
         padding-top: px-to-rem(66);
-        padding-bottom: px-to-rem(77);
+        padding-bottom: px-to-rem(137);
 
         &__description {
             margin-bottom: 0;
@@ -101,15 +117,20 @@
 
         &__inner {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            max-width: px-to-rem(1400);
         }
 
-        &__title-second {
-            margin-bottom: px-to-rem(6);
+        &__title {
+            margin-bottom: px-to-rem(76);
+
+            &-second {
+                margin-bottom: px-to-rem(6);
+            }
         }
 
         &__informacion {
-            padding-left: 0;
+            padding-left: px-to-rem(60);
             padding-top: px-to-rem(57);
 
             &-wrap {
@@ -124,12 +145,27 @@
         &__img {
             display: flex;
             justify-content: center;
-            background-repeat: no-repeat;
-            background-position: 50% 0;
-            margin: 0 auto;
+            margin: 0;
             width: 100%;
             max-width: px-to-rem(600);
             margin-bottom: 0;
+
+            &::before {
+                max-width: px-to-rem(600);
+                padding-top: px-to-rem(380);
+            }
+        }
+
+        &__product {
+            display: flex;
+            max-width: px-to-rem(115);
+            max-height: px-to-rem(339);
+            width: 100%;
+            height: 100%;
+
+            &-img {
+                transform: translateY(28%);
+            }
         }
     }
 }

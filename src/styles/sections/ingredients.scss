@@ -35,9 +35,15 @@
 
     &__btn {
         background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
-        padding: px-to-rem(12) px-to-rem(70) px-to-rem(12) px-to-rem(70);
+        padding: px-to-rem(12) px-to-rem(20) px-to-rem(12) px-to-rem(20);
         margin: 0;
         border-radius: px-to-rem(24);
+        min-width: px-to-rem(260);
+    }
+
+    &__content {
+        max-width: px-to-rem(1488);
+        margin: 0 auto;
     }
 
     &__more {
@@ -56,6 +62,10 @@
         &__item {
             margin: 0 20%;
             margin-bottom: px-to-rem(80);
+        }
+
+        &__wrap {
+            margin: px-to-rem(20) 0;
         }
     }
 }

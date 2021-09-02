@@ -2,9 +2,6 @@
 	{% set args = {
         titleFirst: "Too much copy supplied",
         descriptionTitle: "Needs to be 2 lines max",
-        background: {
-            src: "./../../images/cream-background.png",
-        },
         image: {
             src: "./../../images/cream-skin.png",
         },
@@ -31,7 +28,7 @@
 		</div>
 
 		<div class="s-cream__inner">
-			<div class="s-cream__img" style="background-image: url({{ args.background.src }})">
+			<div class="s-cream__img">
 				{% if args.image.src %}
 					<div class="s-cream__product">
 						<img class="s-cream__product-img" src="{{ args.image.src }}" alt="">

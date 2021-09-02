@@ -12,10 +12,5 @@ export default function headerScroll() {
 
     window.addEventListener('scroll', (event) => {
         window.scrollY > 76 ? addClass() : deleteClass()
-        // if (window.scrollY > 100) {
-        //     addClass()
-        // } else if (window.scrollY === 0) {
-        //     deleteClass()
-        // }
     });
 }
