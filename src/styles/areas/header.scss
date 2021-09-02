@@ -1,6 +1,42 @@
 .header {
   padding: 0 px-to-rem(26);
-  padding-top: px-to-rem(16);
+  padding-top: px-to-rem(14);
+  position: relative;
+  z-index: 2;
+
+  &.is-active {
+    background-color: $c-main;
+    position: fixed;
+    width: 100%;
+    padding-bottom: px-to-rem(14);
+    transition: all .3s ease-in-out;
+
+    .header {
+      &__nav-list {
+        color: $c-reverse;
+      }
+
+      &__burger-menu {
+        color: $c-reverse;
+      }
+
+      &__basket-desc {
+        color: $c-reverse;
+      }
+
+      &__basket-svg {
+        color: $c-reverse;
+      }
+
+      &__logo-svg {
+        color: #FF1F9E;
+      }
+
+      &__logo-color {
+        color: #CCED00;
+      }
+    }
+  }
 
   &__nav {
     display: none;
@@ -10,6 +46,10 @@
       font-family: HelveticaNeueLTStd-Lt;
       font-size: $fs-menu;
       line-height: px-to-rem(24);
+
+      &:hover {
+        color: $c-accent;
+      }
     }
   }
 
@@ -28,11 +68,26 @@
 
     &-menu {
       width: px-to-rem(22);
+      color: $c-main;
     }
   }
 
   &__logo {
-    width: px-to-rem(82);
+
+    &-link {
+      display: flex;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-svg {
+      width: px-to-rem(82);
+      height: px-to-rem(26);
+      color: $c-main;
+    }
   }
 
   &__basket {
@@ -42,6 +97,10 @@
 
     &-wrap {
       position: relative;
+    }
+
+    &-svg {
+      color: $c-main
     }
 
     &-sum {
@@ -59,6 +118,14 @@
       top: 0;
       right: px-to-rem(-7);
     }
+
+    &-btn {
+      cursor: pointer;
+
+      &:hover {
+        color: $c-accent;
+      }
+    }
   }
 
   @include media-breakpoint-up(lg) {
@@ -68,11 +135,16 @@
       display: flex;
       flex-wrap: wrap;
       flex: 0 1 33%;
+
+      &-svg {
+        width: px-to-rem(127);
+        height: px-to-rem(38);
+      }
     }
 
     &__wrap {
       align-items: center;
-      padding-top: px-to-rem(30);
+      padding-top: px-to-rem(17);
     }
 
     &__nav {
@@ -218,6 +290,9 @@
       height: 100%;
     }
 
+    &-img {
+      color: $c-main;
+    }
   }
 
   &__inner {

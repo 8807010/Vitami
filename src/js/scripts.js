@@ -3,8 +3,11 @@ import svg4everybody from 'svg4everybody';
 import scrollLock from 'scroll-lock';
 
 import menuMobile from './components/header-menu';
-import Header from './components/header';
+
 import testServerRequest from './components/test-server-request.js';
+
+import headerScroll from './components/header-scroll';
+headerScroll();
 
 svg4everybody();
 
@@ -40,7 +43,6 @@ window.app = {
 
   init () {
 
-    window.app.header = new Header('.js-header');
 
     app.initModule(testServerRequest, '.js-test-api');
 
@@ -51,3 +53,6 @@ window.app = {
 
 
 window.addEventListener('DOMContentLoaded', app.init);
+
+
+
