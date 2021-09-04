@@ -26,6 +26,7 @@
     &__item {
         list-style-type: none;
         padding-bottom: px-to-rem(35);
+        margin: 0 auto;
     }
 
     &__list {
@@ -64,8 +65,8 @@
             margin-bottom: px-to-rem(80);
         }
 
-        &__wrap {
-            margin: px-to-rem(20) 0;
+        &__name {
+            margin-bottom: px-to-rem(63);
         }
     }
 }
