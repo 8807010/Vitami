@@ -15,37 +15,61 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 px-to-rem(-8);
     }
 
     &__wrap {
-        padding-left: px-to-rem(30);
-        padding-right: px-to-rem(8);
-        padding-bottom: px-to-rem(40);
+        margin-left: px-to-rem(38);
+        margin-right: px-to-rem(16);
+        margin-bottom: px-to-rem(40);
+        max-width: 95%;
     }
 
     &__picture {
-        width: 107%;
+        box-shadow: 0 px-to-rem(11) px-to-rem(14) rgba(0, 0, 0, 0.5);
+        display: block;
+        width: 100%;
+        position: relative;
+        max-width: px-to-rem(835);
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__img {
-        height: px-to-rem(339);
-        max-width: px-to-rem(594);
         width: 100%;
-        border-radius: px-to-rem(6);
+        height: 100%;
         object-fit: cover;
-        object-position: left;
+        border-radius: px-to-rem(6);
     }
 
     @include media-breakpoint-up(md) {
-        width: px-to-rem(700);
+        min-width: px-to-rem(800);
 
         &__inner {
             display: flex;
             flex-direction: row;
+            align-items: stretch;
+            min-height: px-to-rem(300);
         }
 
         &__wrap {
-            width: 100%;
+            max-width: px-to-rem(400);
+            flex: 0 0 45%;
         }
 
         &__img {
@@ -57,29 +81,29 @@
         }
 
         &__picture {
-            width: 100%;
-            height: 105%;
+            &::before {
+                padding-top: 0;
+            }
         }
     }
 
     @include media-breakpoint-up(lg) {
-        max-width: px-to-rem(1487);
+        min-width: px-to-rem(1392);
 
         &__title {
             padding-top: 0;
         }
-        
+
         &__wrap {
-            max-width: px-to-rem(508);
-            width: 100%;
-            padding-top: px-to-rem(82);
-            padding-left: px-to-rem(92);
-            padding-bottom: px-to-rem(70);
-            padding-right: px-to-rem(52);
+            padding: 0;
+            margin-top: px-to-rem(82);
+            margin-left: px-to-rem(92);
+            margin-bottom: px-to-rem(70);
+            margin-right: px-to-rem(52);
         }
 
-        &__picture {
-            width: px-to-rem(835);
+        &__inner {
+            min-height: px-to-rem(594);
         }
     }
 }
