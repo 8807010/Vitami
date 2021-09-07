@@ -10,12 +10,8 @@
 			{% endif %}
 		</div>
 
-		{% if item.img.src %}
-			<div class="c-ingredient__picture">
-				<div class="c-ingredient__image">
-					<img class="c-ingredient__img" src="{{ item.img.src }}" alt="">
-				</div>
-			</div>
-		{% endif %}
+		<div class="c-ingredient__image" style="background-image: url({{ item.img.src }})">
+			<a class="c-ingredient__link" href="#" ></a>
+		</div>
 	</div>
 </article>
