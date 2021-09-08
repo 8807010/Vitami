@@ -1,13 +1,16 @@
 .c-ingredient {
     height: max-content;
     background-color: $c-main;
-    border-radius: px-to-rem(12);
-    width: px-to-rem(317);
     margin: 0 px-to-rem(18);
 
     &__title {
         margin-bottom: px-to-rem(17);
         padding-top: px-to-rem(37);
+    }
+
+    &__section {
+        min-width: 317px;
+        width: 100%;
     }
 
     &__wrap {
@@ -16,7 +19,7 @@
         padding: px-to-rem(23) px-to-rem(11) px-to-rem(48) px-to-rem(38);
         font-size: px-to-rem(16);
         margin: 0 px-to-rem(8);
-        border-radius: px-to-rem(12) px-to-rem(12) 0 0;
+        max-width: 652px;
     }
 
     &__inner {
@@ -43,34 +46,47 @@
     }
 
     @include media-breakpoint-up(lg) {
-        min-width: px-to-rem(1392);
+        border-radius: px-to-rem(12) 0 0 px-to-rem(12);
 
         &__title {
             padding-top: 0;
         }
 
+        &__section {
+            position: relative;
+            display: block;
+        }
+
         &__wrap {
             padding: px-to-rem(82) px-to-rem(52) px-to-rem(70) px-to-rem(92);
             background: #fff;
-            border-radius: px-to-rem(4) 0 0 px-to-rem(4);
             overflow: hidden;
             font-size: $fs-text;
             width: px-to-rem(1487);
             margin: 0;
+            border-radius: px-to-rem(12) 0 0 px-to-rem(12);
         }
 
         &__image {
+            position: absolute;
+            top: auto;
+            left: 652px;
             margin: 0;
-            border-radius: px-to-rem(4) 0 0 px-to-rem(4);
+            border-radius: px-to-rem(8);
             overflow: hidden;
             max-width: px-to-rem(835);
+            display: flex;
+            justify-content: center;
+            height: 105%;
+            width: 100%;
         }
 
         &__inner {
-            margin: 0;
+            margin: 20px 0;
             display: flex;
             flex-direction: row;
-            align-items: stretch;
+            align-items: center;
+            max-width: 750px;
         }
 
         &__link {

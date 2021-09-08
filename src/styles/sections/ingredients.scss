@@ -16,7 +16,7 @@
         margin-bottom: px-to-rem(8);
     }
 
-    &__description-title {
+    &__subtitle {
         font-family: Arial, Helvetica, sans-serif;
         font-size: $fs-base;
         line-height: px-to-rem(19);
@@ -36,10 +36,15 @@
 
     &__btn {
         background: linear-gradient(130.7deg, $c-brandStart 7.15%, $c-brandEnd 94.53%);
-        border-radius: px-to-rem(24);
-        padding: px-to-rem(12) px-to-rem(70) px-to-rem(12) px-to-rem(70);
+        padding: px-to-rem(12) px-to-rem(20) px-to-rem(12) px-to-rem(20);
         margin: 0;
         border-radius: px-to-rem(24);
+        min-width: px-to-rem(260);
+    }
+
+    &__content {
+        max-width: px-to-rem(1488);
+        margin: 0 auto;
     }
 
     &__more {
@@ -56,8 +61,14 @@
         }
 
         &__item {
-            margin: 0 20%;
+            margin: 0 50%;
             margin-bottom: px-to-rem(80);
+        }
+
+        &__list {
+            display: flex;
+            overflow-x: scroll;
+            align-items: baseline;
         }
 
         &__name {
