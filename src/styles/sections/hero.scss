@@ -11,6 +11,7 @@
   align-items: center;
   margin-top: px-to-rem(-46);
   z-index: -1;
+  background-image: var(--background-image);
 
   &__description {
     color: $c-main;
