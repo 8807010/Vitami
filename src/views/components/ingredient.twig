@@ -1,23 +1,19 @@
 <article class="c-ingredient">
-    <div class="c-ingredient__section">
-        <div class="c-ingredient__inner">
-            <div class="c-ingredient__wrap">
-                {% if item.title %}
-                    <h3 class="c-ingredient__title">
-                        {{ item.title }}
-                    </h3>
-                {% endif %}
+    <div class="c-ingredient__description">
+        {% if item.title %}
+            <h3 class="c-ingredient__description-title">{{ item.title }}</h3>
+        {% endif %}
 
-                {% if item.text %}
-                    <p class="c-ingredient__text">
-                        {{ item.text }}
-                    </p>
-                {% endif %}
-            </div>
-
-            <div class="c-ingredient__image" style="background-image: url({{ item.img.src }})">
-                <a class="c-ingredient__link" href="#"></a>
-            </div>
-        </div>
+        {% if item.text %}
+            <p class="c-ingredient__description-text">{{ item.text }}</p>
+        {% endif %}
     </div>
+
+    <div class="c-ingredient__picture">
+        <div class="c-ingredient__picture-wrap">
+            <img src="{{ item.img.src }}" alt="" class="c-ingredient__picture-img">
+        </div>
+        <a class="c-ingredient__picture-link" href="#"></a>
+    </div>
+
 </article>
