@@ -3,6 +3,10 @@
     padding-bottom: px-to-rem(31);
     background-color: $c-backgraund;
 
+    &__container {
+        @extend .l-container;
+    }
+
     &__name {
         text-align: center;
         margin-bottom: px-to-rem(35);
@@ -31,7 +35,7 @@
 
     &__list {
         display: flex;
-        overflow-x: scroll;
+        overflow: auto;
     }
 
     &__btn {
@@ -61,8 +65,13 @@
         }
 
         &__item {
-            margin: 0 20%;
-            margin-bottom: px-to-rem(80);
+            min-width: px-to-rem(1300);
+            margin: 0 auto;
+        }
+
+        &__list {
+            display: flex;
+            align-items: baseline;
         }
 
         &__name {
