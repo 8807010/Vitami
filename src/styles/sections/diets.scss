@@ -16,12 +16,16 @@
         margin-top: px-to-rem(20);
         margin-right: px-to-rem(20);
         margin-bottom: px-to-rem(20);
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     &__list {
         display: flex;
         flex-direction: row;
-        overflow-x: scroll;
+        overflow: auto;
     }
 
     @include media-breakpoint-up(lg) {

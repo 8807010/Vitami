@@ -2,6 +2,11 @@
     padding-top: px-to-rem(103);
     padding-bottom: px-to-rem(103);
     background-color: $c-main;
-    display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
+
+    &__wrap {
+        max-width: px-to-rem(1487);
+        margin: 0 auto;
+        display: flex;
+    }
 }
